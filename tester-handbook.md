@@ -1,3 +1,4 @@
+## GreenBlob's message contents 
 1. Map basics
     Flags
     Unbreakable floor under flags
@@ -39,3 +40,22 @@
 5. Pull request
     Screenshot included with the PR (The screenshot ratio must be 3:2)
     PR includes the following files: map.mts, map.conf, and screenshot.png
+
+## -sniper-'s message contents
+You can test any map anytime. It is recommended to first test Pull requests with `Review required` label because other maps usually already have bugs/issues.
+
+What should map tester look for? Issues or bugs such as:
+
+**-** First map tester should check if map works in CTF game.
+**-** Map should be unique and not similar to other maps. So this means that most of plain maps will be rejected if they are not interesting. The design of a map should encourage differing game play and tactics.
+**-** It should be fun to play on it.
+**-** Maps shouldn't be glitchy (ie: no holes which lead into void, no wrongly placed barriers). Barriers should be placed properly, red barrier should disappear on match start.
+**-** Maps should not contain not-supported blocks (such as chests, rails, butterflies...). If there is not-supported block on a map, you will see red error in chat, starting with `Failed to resolve node name...`
+**-** Map must have a **valid Free Software/Open Source license** . There should be a line in `map.conf`:` license = <license_name>`
+**-** Maps should be reasonably balanced - i.e.: two team of equal ability would have the same chance of winning. One team should not have advantage (for example more ores, better position...).
+**-** Players shouldn't be able to escape from the map - i.e. go outside of the barrier
+**-** Pull request (=PR) should contain `map.mts`, `map.conf` and `screenshot.png`. If PR contain zip files for example, then it is not created properly. Screenshot should have ratio 3:2 (750x500px for example)
+**-** Player should be able to pick and capture flag.
+**-** Something what I have probably forgotten to add ¯\_(ツ)_/¯
+
+And finally, write your review as comment in PR. **Tell your opinion** (fun/not fun, missing license, doesn't work...). Every opinion matters.
