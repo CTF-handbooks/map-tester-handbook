@@ -1,8 +1,12 @@
 # Map Tester Handbook
 ## Table of Contents
-()
+1. [Tasks](#tasks)
+2. [GreenBlob's message contents](#greenblobs-message-contents)
 
-## 
+## Tasks
+- [ ] Test
+
+
 
 ## GreenBlob's message contents 
 1. Map basics
@@ -65,3 +69,5 @@ What should map tester look for? Issues or bugs such as:
 **-** Something what I have probably forgotten to add ¯\_(ツ)_/¯
 
 And finally, write your review as comment in PR. **Tell your opinion** (fun/not fun, missing license, doesn't work...). Every opinion matters.
+
+[def]: #tasks
