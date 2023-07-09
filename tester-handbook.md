@@ -1,3 +1,9 @@
+# Map Tester Handbook
+## Table of Contents
+()
+
+## 
+
 ## GreenBlob's message contents 
 1. Map basics
     Flags
