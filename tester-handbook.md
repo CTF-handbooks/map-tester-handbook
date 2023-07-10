@@ -1,13 +1,7 @@
 # Map Tester Handbook
 ## Table of Contents
-- [Merged Doc](#merged-doc)
-    - [Outline](#outline)
-- [Individual Sources](#individual-sources)
-    - [GreenBlob's message contents](#greenblobs-message-contents)
-    - [-sniper-'s message contents](#sniper-s-message-contents)
-
-## Merged Doc
-### Outline
+> Will do later; the headings will be changed
+## Outline
 1. Labels to be aware of
 2. PR scheme
 3. Map works/errors
@@ -19,19 +13,26 @@
 9. Screenshot 
 10. More to be included and discussed upon
 
+## Handbook
+### Introduction
+### Labels on Pull Requests
+### Checking PR scheme
+### Cloning the PR for Testing (+ scripts WIP)
+### Map
+### Etc
 
 ## Individual sources
 ### GreenBlob's message contents 
 1. Map basics
     * Flags
     * Unbreakable floor under flags
-    * Teamchests added for each team
+    * Team chests added for each team
     * Indestructible barrier glass around the map (Or any other unbreakable material)
     * Roof that prevents players from escaping
     * Indestructible red barrier glass in the middle of the map (Indestructible red barrier stone for underground)
     * Indestructible blocks at the bottom of the map
     * Barriers are all placed properly
-    * Red barriers disappear when the math starts
+    * Red barriers disappear when the match starts
     * Map does not contain blocks that are not supported
     * Players should be able to capture the flag
     
