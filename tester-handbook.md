@@ -27,8 +27,21 @@ The repository contains folders dedicated to each map. For example, the folder c
 	└── screenshot.png
 ```
 1. `map.conf`: It is the file that contains metadata about various constants and fields essential to the map.
-2. `map.mts`: The file that <etc.>
-3. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and is needed to have an aspect ratio of 3:2 (600x400px is suggested).
+2. `map.mts`: A schematic file (`.mts`) is used to import the map into the game world.
+3. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and is needed to have an aspect ratio of 3:2 (600×400px is suggested).
+### Using GitHub and Git
+The gist of Git:
+> Git is a [free and open source](https://git-scm.com/about/free-and-open-source) distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+> - [The official git website](https://git-scm.com/)
+
+And GitHub:
+> _GitHub hosts Git repositories and provides developers with tools to ship better code through command line features, issues (threaded discussions), pull requests, code review, or the use of a collection of free and for-purchase apps in the GitHub Marketplace. With collaboration layers like the GitHub flow, a community of 100 million developers, and an ecosystem with hundreds of integrations, GitHub changes the way software is built._
+> - [Git and how it works with GitHub](https://docs.github.com/en/get-started/using-git/about-git)
+
+If you are using Linux or macOS, then you'd ... continue this after testing Git on Windows.
+
+
+
 ### Labels on Pull Requests
 ### Checking PR scheme
 ### Cloning the PR for Testing (+ scripts WIP)
