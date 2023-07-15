@@ -16,7 +16,19 @@
 ## Handbook
 ### Introduction
 CTF Map Testers have a big task at their hands. The process of testing maps involves numerous steps, and everyone has their own unique style. However, how can you get started with it? What are the requirements for it? What are the points to keep in mind while testing maps? All these questions and more will be addressed in this handbook. This handbook is **not** a rigid set of rules that Map Testers should dogmatically follow. But instead, is a compilation of guidelines and things that Map Testers should have at their disposal for greater analytical productivity in doing their job as a tester. If you have any suggestions or improvements regarding this project, feel free to make a PR or Issue for it! This project is possible only by the efforts of the community of Map Testers at CTF.
-Maps for the Capture the Flag game are located in the [CTF Maps repository](https://github.com/mt-CTF/maps). To be continued... 
+Maps for the Capture the Flag game are located in the [CTF Maps repository](https://github.com/mt-CTF/maps). 
+### Structure of the Repository
+All the [maps on CTF](https://github.com/mt-CTF/maps) are in a repository on [GitHub](https://en.wikipedia.org/wiki/GitHub), the website via which you may be reading this. GitHub is one of the “many platforms and cloud-based services for software development and version control using `Git`, allowing developers to store and manage their code.” But no worries, you don't need to be a full-stack coder to use Git. 
+The repository contains folders dedicated to each map. For example, the folder containing the required files for the “Intervention in the Ice Age” Map is in the folder `iceage`. The scheme of a map folder in the repository should be as shown below:
+```
+<map folder>
+	├── map.conf
+	├── map.mts
+	└── screenshot.png
+```
+1. `map.conf`: It is the file that contains metadata about various constants and fields essential to the map.
+2. `map.mts`: The file that <etc.>
+3. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and is needed to have an aspect ratio of 3:2 (600x400px is suggested).
 ### Labels on Pull Requests
 ### Checking PR scheme
 ### Cloning the PR for Testing (+ scripts WIP)
