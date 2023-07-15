@@ -38,9 +38,12 @@ And GitHub:
 > _GitHub hosts Git repositories and provides developers with tools to ship better code through command line features, issues (threaded discussions), pull requests, code review, or the use of a collection of free and for-purchase apps in the GitHub Marketplace. With collaboration layers like the GitHub flow, a community of 100 million developers, and an ecosystem with hundreds of integrations, GitHub changes the way software is built._
 > - [Git and how it works with GitHub](https://docs.github.com/en/get-started/using-git/about-git)
 
-If you are using Linux or macOS, then you'd ... continue this after testing Git on Windows.
+Git is available universally on all operating systems. You can read the installation instructions [here](https://git-scm.com/download/). A quick search in your favourite search engine about “basic git commands” should get you started. For the purposes of this handbook, you will need to know the following commands:
+- `git clone git@github.com:<repository name>.git` \-  Clones the repository into a folder named as the repository
+- `git pull` \-  Fetches and merges the contents of the repository to your local working branch. You will be using this a lot.
+- Some command I forgot (will check later on Linux)
 
-
+If you're wondering why it is mentioned in this handbook to specifically use commands, it is because using the web GUI and downloading the folders rather than working with `git` will slow down the process of testing maps.
 
 ### Labels on Pull Requests
 ### Checking PR scheme
