@@ -41,7 +41,7 @@ And GitHub:
 Git is available universally on all operating systems. You can read the installation instructions [here](https://git-scm.com/download/). A quick search in your favourite search engine about “basic git commands” should get you started. For the purposes of this handbook, you will need to know the following commands:
 - `git clone git@github.com:<repository name>.git` \-  Clones the repository into a folder named as the repository
 - `git pull` \-  Fetches and merges the contents of the repository to your local working branch. You will be using this a lot.
-- Some command I forgot (will check later on Linux)
+- Command to change branches; will look into that later.
 
 If you're wondering why it is mentioned in this handbook to specifically use commands, it is because using the web GUI and downloading the folders rather than working with `git` will slow down the process of testing maps.
 
