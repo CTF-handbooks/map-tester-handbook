@@ -1,6 +1,6 @@
 # Map Tester Handbook
 ## Table of Contents
-> Will do later; the headings will be changed
+> I will do later; the headings will be changed
 ## Outline
 1. Labels to be aware of
 2. PR scheme
@@ -9,13 +9,13 @@
 5. Flags and the base
 6. Team zones and testing process
 7. Config (to be discussed later) (also includes proper fields filled)
-8. Design/glitches/mistakes/inconsistencies, balance/, opinion
+8. Design/glitches/mistakes/inconsistencies, balance/opinion
 9. Screenshot 
 10. More to be included and discussed upon
 
 ## Handbook
 ### Introduction
-CTF Map Testers have a big task at their hands. The process of testing maps involves numerous steps, and everyone has their own unique style. However, how can you get started with it? What are the requirements for it? What are the points to keep in mind while testing maps? All these questions and more will be addressed in this handbook. This handbook is **not** a rigid set of rules that Map Testers should dogmatically follow. But instead, is a compilation of guidelines and things that Map Testers should have at their disposal for greater analytical productivity in doing their job as a tester. If you have any suggestions or improvements regarding this project, feel free to make a PR or Issue for it! This project is possible only by the efforts of the community of Map Testers at CTF.
+CTF Map Testers have a big task on their hands. The process of testing maps involves numerous steps, and everyone has their own unique style. However, how can you get started with it? What are the requirements for it? What are the points to keep in mind while testing maps? All these questions and more will be addressed in this handbook. This handbook is **not** a rigid set of rules that Map Testers should dogmatically follow. But instead, it is a compilation of guidelines and things that Map Testers should have at their disposal for greater analytical productivity in doing their job as a tester. If you have any suggestions or improvements regarding this project, feel free to make a PR or Issue for it! This project is possible only through the efforts of the community of Map Testers at CTF.
 Maps for the Capture the Flag game are located in the [CTF Maps repository](https://github.com/mt-CTF/maps). 
 ### Structure of the Repository
 All the [maps on CTF](https://github.com/mt-CTF/maps) are in a repository on [GitHub](https://en.wikipedia.org/wiki/GitHub), the website via which you may be reading this. GitHub is one of the “many platforms and cloud-based services for software development and version control using `Git`, allowing developers to store and manage their code.” But no worries, you don't need to be a full-stack coder to use Git. 
@@ -41,12 +41,12 @@ And GitHub:
 Git is available universally on all operating systems. You can read the installation instructions [here](https://git-scm.com/download/). A quick search in your favourite search engine about “basic git commands” should get you started. For the purposes of this handbook, you will need to know the following commands:
 - `git clone git@github.com:<repository name>.git` \-  Clones the repository into a folder named as the repository
 - `git pull` \-  Fetches and merges the contents of the repository to your local working branch. You will be using this a lot.
-- Command to change branches; will look into that later.
+- `git checkout <branch name>` \- Changes your current working branch to the one you want to. You will utilise this for grabbing the appropriate folders since the map PRs are usually on a branch other than the `master`/`main`. 
 
-If you're wondering why it is mentioned in this handbook to specifically use commands, it is because using the web GUI and downloading the folders rather than working with `git` will slow down the process of testing maps.
+If you're wondering why it is mentioned in this handbook to use commands specifically, it is because using the web GUI and downloading the folders rather than working with `git` will slow down the process of testing maps.
 
 ### Labels on Pull Requests
-### Checking PR scheme
+### Checking the PR scheme
 ### Cloning the PR for Testing (+ scripts WIP)
 ### Map
 ### Etc
@@ -74,7 +74,7 @@ If you're wondering why it is mentioned in this handbook to specifically use com
     * Red barrier covers all the empty spaces
     
     **Players should not be teleported back if they are standing within their team boundary**
-    (Make sure to check all the corners of the team boundary. For example: the areas behind the team base, in the air, below in the ground, etc....)
+    (Make sure to check all the corners of the team boundary. For example, the areas behind the team base, in the air, below in the ground, etc....)
 
 3. Map config
     * Map is enabled
@@ -96,14 +96,14 @@ If you're wondering why it is mentioned in this handbook to specifically use com
     * PR includes the following files: map.mts, map.conf, and screenshot.png
 
 ### -sniper-'s message contents
-You can test any map anytime. It is recommended to first test Pull requests with `Review required` label because other maps usually already have bugs/issues.
+You can test any map anytime. It is recommended to first test Pull requests with a `Review required` label because other maps usually already have bugs/issues.
 
 What should map tester look for? Issues or bugs such as:
 
 - First map tester should check if map works in CTF game.
-- Map should be unique and not similar to other maps. So this means that most of plain maps will be rejected if they are not interesting. The design of a map should encourage differing game play and tactics.
+- Map should be unique and not similar to other maps. So this means that most of plain maps will be rejected if they are not interesting. The design of a map should encourage differing gameplay and tactics.
 - It should be fun to play on it.
-- Maps shouldn't be glitchy (ie: no holes which lead into void, no wrongly placed barriers). Barriers should be placed properly, red barrier should disappear on match start.
+- Maps shouldn't be glitchy (i.e., no holes which lead into voids, no wrongly placed barriers). Barriers should be placed properly, red barrier should disappear on match start.
 - Maps should not contain not-supported blocks (such as chests, rails, butterflies...). If there is not-supported block on a map, you will see red error in chat, starting with `Failed to resolve node name...`
 - Map must have a **valid Free Software/Open Source license** . There should be a line in `map.conf`:` license = <license_name>`
 - Maps should be reasonably balanced - i.e.: two team of equal ability would have the same chance of winning. One team should not have advantage (for example more ores, better position...).
@@ -112,4 +112,4 @@ What should map tester look for? Issues or bugs such as:
 - Player should be able to pick and capture flag.
 - Something what I have probably forgotten to add ¯\_(ツ)_/¯
 
-And finally, write your review as comment in PR. **Tell your opinion** (fun/not fun, missing license, doesn't work...). Every opinion matters.
+And finally, write your review as a comment in PR. **Tell your opinion** (fun/not fun, missing license, doesn't work...). Every opinion matters.
