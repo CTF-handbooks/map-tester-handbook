@@ -62,6 +62,7 @@ If you're wondering why it is mentioned in this handbook to use commands specifi
 
 ### 1. How to know which maps to review?
 The Map PRs have labels which indicate their current stage in development. You should look for the ***"New Map"*** and ***"Review Required :mag:"***. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, ***"Action/change needed :grey_exclamation:"*** and so on. All these describe about a particular PR. An example of one that you can test is:
+![Labels Example](label_example.png)
 
 ## Checking the PR scheme
 ## Cloning the PR for Testing (+ scripts WIP)
