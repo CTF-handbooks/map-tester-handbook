@@ -29,32 +29,29 @@ All the [maps on CTF](https://github.com/mt-CTF/maps) are in a repository on [Gi
 The repository contains folders dedicated to each map. For example, the folder containing the required files for the “Intervention in the Ice Age” Map is in the folder `iceage`. The scheme of a map folder in the repository should be as shown below:
 ```
 <map folder>
-	├── map.conf
-	├── map.mts
-	└── screenshot.png
+  ├── map.conf
+  ├── map.mts
+  └── screenshot.png
 ```
 1. `map.conf`: The file contains metadata about various constants and fields essential to the map.
 2. `map.mts`: A schematic file (`.mts`) is used to import the map into the game world.
 3. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and is needed to have an aspect ratio of 3:2 (600×400px is suggested).
 
 ## Using GitHub and Git
-
+### 1. About the two
 The gist of Git:
 > Git is a [free and open source](https://git-scm.com/about/free-and-open-source) distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-> - [The official git website](https://git-scm.com/)
+> \- [The official git website](https://git-scm.com/)
 
 And GitHub:
 > _GitHub hosts Git repositories and provides developers with tools to ship better code through command line features, issues (threaded discussions), pull requests, code review, or the use of a collection of free and for-purchase apps in the GitHub Marketplace. With collaboration layers like the GitHub flow, a community of 100 million developers, and an ecosystem with hundreds of integrations, GitHub changes the way software is built._
-> - [Git and how it works with GitHub](https://docs.github.com/en/get-started/using-git/about-git)
+> \- [Git and how it works with GitHub](https://docs.github.com/en/get-started/using-git/about-git)
 
-{{box op="start" cssClass="boxed noteBox"}}
-**Note!**
-Test box
-This is something important to keep in mind.
-{{box op="end"}}
+### 2. Practical implications
+Git is available universally on all operating systems. You can read the installation instructions [here](https://git-scm.com/download/). A look-up in your favourite search engine about “basic git commands” should get you started. 
+> **Note**: If you use Linux/MacOS, the command line is more powerful than commands. However, if you use Windows, then it would be easier to use the GitHub website, although it would be slower.
 
-
-Git is available universally on all operating systems. You can read the installation instructions [here](https://git-scm.com/download/). A look-up in your favourite search engine about “basic git commands” should get you started. For the purposes of this handbook, you will need to know the following commands:
+If you are using the `git` CLI, then for the purposes of this handbook, you will need to know the following commands:
 - `git clone git@github.com:<repository name>.git` \-  Clones the repository into a folder named as the repository
 - `git pull` \-  Fetches and merges the contents of the repository to your local working branch. You will be using this a lot.
 - `git checkout <branch name>` \- Changes your current working branch to the one you want to. You will utilise this for grabbing the appropriate folders since changes (here, changes refer to Map additions) are usually on a branch other than the `master`/`main`. 
@@ -64,10 +61,7 @@ If you're wondering why it is mentioned in this handbook to use commands specifi
 ## Testing Maps
 
 ### 1. How to know which maps to review?
-The Map PRs have labels which indicate their current stage in development. The one's that you should look for are the ***"New Map"*** and ***"Review Required'***. There are also others, such as,
-- ***"PR not created properly"***: The PR is not structured as instructed or there is a conflict of the intended changes,
-- ***"WIP"***: Literally means "Work in Progress". It indicates that the map is not ready for a final review and is currently in the process of making or refining,
-- ***"Enhancement"***: The PR enhances a map that already was, and so on.
+The Map PRs have labels which indicate their current stage in development. You should look for the ***"New Map"*** and ***"Review Required :mag:"***. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, ***"Action/change needed :grey_exclamation:"*** and so on. All these describe about a particular PR. An example of one that you can test is:
 
 ## Checking the PR scheme
 ## Cloning the PR for Testing (+ scripts WIP)
