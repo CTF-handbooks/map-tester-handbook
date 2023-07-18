@@ -3,26 +3,29 @@
 ## Table of Contents
 > I will do later; the headings will be changed
 
-## Outline
-1. Labels to be aware of
-2. PR scheme
-3. Map works/errors
-4. ^ Some error specifics
-5. Flags and the base
-6. Team zones and testing process
-7. Config (to be discussed later) (also includes proper fields filled)
-8. Design/glitches/mistakes/inconsistencies, balance/opinion
-9. Screenshot 
-10. More to be included and discussed upon
+> ## Outline
+> 1. Labels to be aware of
+> 2. PR scheme
+> 3. Map works/errors
+> 4. ^ Some error specifics
+> 5. Flags and the base
+> 6. Team zones and testing process
+> 7. Config (to be discussed later) (also includes proper fields filled)
+> 8. Design/glitches/mistakes/inconsistencies, balance/opinion
+> 9. Screenshot 
+> 10. More to be included and discussed upon
+> Ignore the above ;)
 
-## Handbook
-
-### Introduction
+## Introduction
 CTF Map Testers have a big task on their hands. The process of testing maps involves numerous steps, and everyone has their own unique style. However, how can you get started with it? What are the requirements for it? What are the points to keep in mind while testing maps? All these questions and more will be addressed in this handbook. This handbook is **not** a rigid set of rules that Map Testers should dogmatically follow. But instead, it is a compilation of guidelines and things that Map Testers should have at their disposal for greater analytical productivity in doing their job as a tester. If you have any suggestions or improvements regarding this project, feel free to make a PR or Issue for it! This project is possible only through the efforts of the community of Map Testers at CTF.
 Maps for the Capture the Flag game are located in the [CTF Maps repository](https://github.com/mt-CTF/maps). 
 
-### Structure of the Repository
+## Structure of the Repository
+
+### 1. Where do I find maps for CTF?
 All the [maps on CTF](https://github.com/mt-CTF/maps) are in a repository on [GitHub](https://en.wikipedia.org/wiki/GitHub), the website via which you may be reading this. GitHub is one of the “many platforms and cloud-based services for software development and version control using `Git`, allowing developers to store and manage their code.” But no worries, you don't need to be a full-stack coder to use Git. 
+
+### 2. What do the folders and files mean?
 The repository contains folders dedicated to each map. For example, the folder containing the required files for the “Intervention in the Ice Age” Map is in the folder `iceage`. The scheme of a map folder in the repository should be as shown below:
 ```
 <map folder>
@@ -34,7 +37,8 @@ The repository contains folders dedicated to each map. For example, the folder c
 2. `map.mts`: A schematic file (`.mts`) is used to import the map into the game world.
 3. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and is needed to have an aspect ratio of 3:2 (600×400px is suggested).
 
-### Using GitHub and Git
+## Using GitHub and Git
+
 The gist of Git:
 > Git is a [free and open source](https://git-scm.com/about/free-and-open-source) distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 > - [The official git website](https://git-scm.com/)
@@ -43,6 +47,13 @@ And GitHub:
 > _GitHub hosts Git repositories and provides developers with tools to ship better code through command line features, issues (threaded discussions), pull requests, code review, or the use of a collection of free and for-purchase apps in the GitHub Marketplace. With collaboration layers like the GitHub flow, a community of 100 million developers, and an ecosystem with hundreds of integrations, GitHub changes the way software is built._
 > - [Git and how it works with GitHub](https://docs.github.com/en/get-started/using-git/about-git)
 
+{{box op="start" cssClass="boxed noteBox"}}
+**Note!**
+Test box
+This is something important to keep in mind.
+{{box op="end"}}
+
+
 Git is available universally on all operating systems. You can read the installation instructions [here](https://git-scm.com/download/). A look-up in your favourite search engine about “basic git commands” should get you started. For the purposes of this handbook, you will need to know the following commands:
 - `git clone git@github.com:<repository name>.git` \-  Clones the repository into a folder named as the repository
 - `git pull` \-  Fetches and merges the contents of the repository to your local working branch. You will be using this a lot.
@@ -50,19 +61,21 @@ Git is available universally on all operating systems. You can read the installa
 
 If you're wondering why it is mentioned in this handbook to use commands specifically, it is because they will significantly make the process quicker.
 
-### How to know which maps to review?
+## Testing Maps
+
+### 1. How to know which maps to review?
 The Map PRs have labels which indicate their current stage in development. The one's that you should look for are the ***"New Map"*** and ***"Review Required'***. There are also others, such as,
 - ***"PR not created properly"***: The PR is not structured as instructed or there is a conflict of the intended changes,
 - ***"WIP"***: Literally means "Work in Progress". It indicates that the map is not ready for a final review and is currently in the process of making or refining,
 - ***"Enhancement"***: The PR enhances a map that already was, and so on.
 
-### Checking the PR scheme
-### Cloning the PR for Testing (+ scripts WIP)
-### Map
-### Etc
+## Checking the PR scheme
+## Cloning the PR for Testing (+ scripts WIP)
+## Map
+## Etc
 
-## Individual sources
-### GreenBlob's message contents 
+# Individual sources
+## GreenBlob's message contents 
 1. Map basics
     * Flags
     * Unbreakable floor under flags
@@ -105,7 +118,7 @@ The Map PRs have labels which indicate their current stage in development. The o
     * Screenshot included with the PR (The screenshot ratio must be 3:2)
     * PR includes the following files: map.mts, map.conf, and screenshot.png
 
-### -sniper-'s message contents
+## -sniper-'s message contents
 You can test any map anytime. It is recommended to first test Pull requests with a `Review required` label because other maps usually already have bugs/issues.
 
 What should map tester look for? Issues or bugs such as:
