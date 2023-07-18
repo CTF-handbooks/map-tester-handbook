@@ -30,7 +30,7 @@ The repository contains folders dedicated to each map. For example, the folder c
 	├── map.mts
 	└── screenshot.png
 ```
-1. `map.conf`: It is the file that contains metadata about various constants and fields essential to the map.
+1. `map.conf`: The file contains metadata about various constants and fields essential to the map.
 2. `map.mts`: A schematic file (`.mts`) is used to import the map into the game world.
 3. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and is needed to have an aspect ratio of 3:2 (600×400px is suggested).
 
@@ -46,13 +46,15 @@ And GitHub:
 Git is available universally on all operating systems. You can read the installation instructions [here](https://git-scm.com/download/). A look-up in your favourite search engine about “basic git commands” should get you started. For the purposes of this handbook, you will need to know the following commands:
 - `git clone git@github.com:<repository name>.git` \-  Clones the repository into a folder named as the repository
 - `git pull` \-  Fetches and merges the contents of the repository to your local working branch. You will be using this a lot.
-- `git checkout <branch name>` \- Changes your current working branch to the one you want to. You will utilise this for grabbing the appropriate folders since changes (here, changes refers to Map additions) are usually on a branch other than the `master`/`main`. 
+- `git checkout <branch name>` \- Changes your current working branch to the one you want to. You will utilise this for grabbing the appropriate folders since changes (here, changes refer to Map additions) are usually on a branch other than the `master`/`main`. 
 
 If you're wondering why it is mentioned in this handbook to use commands specifically, it is because they will significantly make the process quicker.
 
 ### How to know which maps to review?
-The Map PRs have labels which indicate their current stage in development. The one's that you should look for are the ***"New Map"*** and ***"Review Required'***. There are also others such as ***"PR not created properly"***, where the PR is not structured as instructed or there is a conflict of the intended changes, ***"WIP"*** (Work in Progress; that is, the map is not ready for a final review), ***"Enhancement"***, which means that the PR enhances a map that already was, and so on.
-
+The Map PRs have labels which indicate their current stage in development. The one's that you should look for are the ***"New Map"*** and ***"Review Required'***. There are also others, such as,
+- ***"PR not created properly"***: The PR is not structured as instructed or there is a conflict of the intended changes,
+- ***"WIP"***: Literally means "Work in Progress". It indicates that the map is not ready for a final review and is currently in the process of making or refining,
+- ***"Enhancement"***: The PR enhances a map that already was, and so on.
 
 ### Checking the PR scheme
 ### Cloning the PR for Testing (+ scripts WIP)
@@ -77,7 +79,7 @@ The Map PRs have labels which indicate their current stage in development. The o
     **Players should not be able to escape the map and the map should work properly**
 
 2. Team zones
-    * Teleports player back when crossed red barrier during build time
+    * Teleports player back when crosses red barrier during build time
     * Does not teleport the player back when the player did not cross the red barrier
     * Red barrier covers all the empty spaces
     
