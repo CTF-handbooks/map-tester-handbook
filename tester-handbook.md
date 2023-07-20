@@ -58,13 +58,28 @@ If you are using the `git` CLI, then for the purposes of this handbook, you will
 
 If you're wondering why it is mentioned in this handbook to use commands specifically, it is because they will significantly make the process quicker.
 
+### 3. GitHub Nomenclature
+(Will do)
+
 ## Testing Maps
 
 ### 1. How to know which maps to review?
+#### 1.1. Where to find Map PRs?
+- Go to the [maps repository](https://github.com/mt-CTF/maps) on your web browser.
+- Click the "Pull Requests" section like this: 
+![PR button](pr-s_section_example.png)
+- You will come to notice PRs with some labels. If you click the PR, it will take you to it.
+- There will be a series of tabs that will help you navigate through the things related to it. (An example image is shown below)
+![Intra-PR Ribbon Example](ribbon_example.png)
+- You can discuss about the PR and leave your reviews in the ***Conversation*** section. The ***Commits*** tab lists the commits that the (will do).
+
+#### 1.2 PR Labels
 The Map PRs have labels which indicate their current stage in development. You should look for the ***"New Map"*** and ***"Review Required :mag:"***. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, ***"Action/change needed :grey_exclamation:"*** and so on. All these describe about a particular PR. An example of one that you can test is:
 ![Labels Example](label_example.png)
 
-## Checking the PR scheme
+### 3. Checking the PR scheme
+
+
 ## Cloning the PR for Testing (+ scripts WIP)
 ## Map
 ## Etc
