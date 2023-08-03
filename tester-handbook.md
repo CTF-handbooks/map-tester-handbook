@@ -58,29 +58,44 @@ If you are using the `git` CLI, then for the purposes of this handbook, you will
 
 If you're wondering why it is mentioned in this handbook to use commands specifically, it is because they will significantly make the process quicker.
 
-### 3. GitHub Nomenclature
-(Will do)
+### 3. Git Terms
+Below is a list of a few terms you should be aware of while map making. Don't be intimidated by these, but keep them in mind for future reference. 
+- A **repository**, is the remote storage in which code is stored.
+> In this case, the map's repository only contains the map folders and their respective files.
+- A **fork** is a new repository that shares code and settings from the original repository. It can be modified and then be made into a **pull request** if needed.
+> Here, map makers will be _forking the maps repository, making their needed additions, like adding maps, and then making a Pull Request_ (more on that below).
+- A **branch** refers to a separate line of development that initially has the same code base as the repository in which it was made. This new branch can have its own set of files and commits.
+- A **commit** means saving changes made to a project's files to the repository itself.
+- A **pull** from a repository simply means getting the source code from the remote repository to one's local machine
+- A **push** means pushing the locally built source code to a remote repository on a repository management platform such as GitHub.
+- A **pull request** (PR) refers to when you make changes in one of your branches and try to integrate those changes with the main repository.
 
 ## Testing Maps
 
 ### 1. How to know which maps to review?
-#### 1.1. Where to find Map PRs?
+#### *Where to find Map PRs?*
 - Go to the [maps repository](https://github.com/mt-CTF/maps) on your web browser.
-- Click the "Pull Requests" section like this: 
+- Click the "Pull Requests" section like this:
 ![PR button](pr-s_section_example.png)
 - You will come to notice PRs with some labels. If you click the PR, it will take you to it.
 - There will be a series of tabs that will help you navigate through the things related to it. (An example image is shown below)
 ![Intra-PR Ribbon Example](ribbon_example.png)
 - You can discuss about the PR and leave your reviews in the ***Conversation*** section. The ***Commits*** tab lists the commits that the (will do).
 
-#### 1.2 PR Labels
+#### *Labels on Pull Requests*
 The Map PRs have labels which indicate their current stage in development. You should look for the ***"New Map"*** and ***"Review Required :mag:"***. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, ***"Action/change needed :grey_exclamation:"*** and so on. All these describe about a particular PR. An example of one that you can test is:
 ![Labels Example](label_example.png)
 
-### 3. Checking the PR scheme
-
-
-## Cloning the PR for Testing (+ scripts WIP)
+## Cloning a PR for Testing
+- Go the the `Pull Requests` and click on the Map PR you would like to review. 
+- Click on the blue text indicating the `<username>:<branch-of-their-fork>` as shown below.
+![PR Fork/Branch Example](pr-fork-branch-example.png)
+- After doing so, use the `Download ZIP` option like this:
+![Getting the files Example](pr-forked-repo-code-example.png)
+- Extract the ZIP folder and select the particular map folder that has been added by the author of the PR within the extracted folders. In the example PR mentioned, the folder is `sewer_village`
+- After successfully identifying the new map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer.
+- You have now retrieved the required map folder!
+> TODO: Git CLI Instructions
 ## Map
 ## Etc
 
