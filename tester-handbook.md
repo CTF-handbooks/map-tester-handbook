@@ -4,9 +4,9 @@
 > I will do later; the headings will be changed
 
 > ## Outline
-> 1. Labels to be aware of
-> 2. PR scheme
-> 3. Map works/errors
+> 1. Labels to be aware of ✅
+> 2. PR scheme ✅
+> 3. Map works/errors 
 > 4. ^ Some error specifics
 > 5. Flags and the base
 > 6. Team zones and testing process
@@ -16,10 +16,12 @@
 > 10. More to be included and discussed upon
 > Ignore the above ;)
 
-## Introduction
-CTF Map Testers have a big task on their hands. The process of testing maps involves numerous steps, and everyone has their own unique style. However, how can you get started with it? What are the requirements for it? What are the points to keep in mind while testing maps? All these questions and more will be addressed in this handbook. This handbook is **not** a rigid set of rules that Map Testers should dogmatically follow. But instead, it is a compilation of guidelines and things that Map Testers should have at their disposal for greater analytical productivity in doing their job as a tester. If you have any suggestions or improvements regarding this project, feel free to make a PR or Issue for it! This project is possible only through the efforts of the community of Map Testers at CTF.
-Maps for the Capture the Flag game are located in the [CTF Maps repository](https://github.com/mt-CTF/maps). 
-
+## Prequisites
+First of all, you need the `Capture the Flag` game. To do so,
+- Go to the `Content` Tab in your Minetest client.
+- Click `Browse Online Content` 
+- Search for `capturetheflag` (make sure that the `Games` category is selected)
+- Click on the `+` icon to install it.
 ## Structure of the Repository
 
 ### 1. Where do I find maps for CTF?
@@ -37,26 +39,8 @@ The repository contains folders dedicated to each map. For example, the folder c
 2. `map.mts`: A schematic file (`.mts`) is used to import the map into the game world.
 3. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and is needed to have an aspect ratio of 3:2 (600×400px is suggested).
 
-## Using GitHub and Git
-### 1. About the two
-The gist of Git:
-> Git is a [free and open source](https://git-scm.com/about/free-and-open-source) distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
-> \- [The official git website](https://git-scm.com/)
-
-And GitHub:
-> _GitHub hosts Git repositories and provides developers with tools to ship better code through command line features, issues (threaded discussions), pull requests, code review, or the use of a collection of free and for-purchase apps in the GitHub Marketplace. With collaboration layers like the GitHub flow, a community of 100 million developers, and an ecosystem with hundreds of integrations, GitHub changes the way software is built._
-> \- [Git and how it works with GitHub](https://docs.github.com/en/get-started/using-git/about-git)
-
-### 2. Practical implications
-Git is available universally on all operating systems. You can read the installation instructions [here](https://git-scm.com/download/). A look-up in your favourite search engine about “basic git commands” should get you started. 
-> **Note**: If you use Linux/MacOS, the command line is more powerful than commands. However, if you use Windows, then it would be easier to use the GitHub website, although it would be slower.
-
-If you are using the `git` CLI, then for the purposes of this handbook, you will need to know the following commands:
-- `git clone git@github.com:<repository name>.git` \-  Clones the repository into a folder named as the repository
-- `git pull` \-  Fetches and merges the contents of the repository to your local working branch. You will be using this a lot.
-- `git checkout <branch name>` \- Changes your current working branch to the one you want to. You will utilise this for grabbing the appropriate folders since changes (here, changes refer to Map additions) are usually on a branch other than the `master`/`main`. 
-
-If you're wondering why it is mentioned in this handbook to use commands specifically, it is because they will significantly make the process quicker.
+## What is GitHub and Git?
+GitHub is a platform that hosts Git repositories and provides developers with several tools to assist their projects. Git is a free and open source version control system designed to handle everything from small to very large projects. Basically, GitHub is a site for managing code and various other projects using the Git. For now, this handbook will only cover the basic ways of obtaining the files you require for testing maps without the need of any command line interface. The handbook for that is a work in progress.
 
 ### 3. Git Terms
 Below is a list of a few terms you should be aware of while map making. Don't be intimidated by these, but keep them in mind for future reference. 
@@ -70,9 +54,7 @@ Below is a list of a few terms you should be aware of while map making. Don't be
 - A **push** means pushing the locally built source code to a remote repository on a repository management platform such as GitHub.
 - A **pull request** (PR) refers to when you make changes in one of your branches and try to integrate those changes with the main repository.
 
-## Testing Maps
-
-### 1. How to know which maps to review?
+## How to know which maps to review?
 #### *Where to find Map PRs?*
 - Go to the [maps repository](https://github.com/mt-CTF/maps) on your web browser.
 - Click the "Pull Requests" section like this:
@@ -86,7 +68,7 @@ Below is a list of a few terms you should be aware of while map making. Don't be
 The Map PRs have labels which indicate their current stage in development. You should look for the ***"New Map"*** and ***"Review Required :mag:"***. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, ***"Action/change needed :grey_exclamation:"*** and so on. All these describe about a particular PR. An example of one that you can test is:
 ![Labels Example](label_example.png)
 
-## Cloning a PR for Testing
+## Getting the PR files for testing
 - Go the the `Pull Requests` and click on the Map PR you would like to review. 
 - Click on the blue text indicating the `<username>:<branch-of-their-fork>` as shown below.
 ![PR Fork/Branch Example](pr-fork-branch-example.png)
@@ -95,9 +77,11 @@ The Map PRs have labels which indicate their current stage in development. You s
 - Extract the ZIP folder and select the particular map folder that has been added by the author of the PR within the extracted folders. In the example PR mentioned, the folder is `sewer_village`
 - After successfully identifying the new map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer.
 - You have now retrieved the required map folder!
-> TODO: Git CLI Instructions
-## Map
-## Etc
+> Make sure that the map has all the required files, namely, `map.mts`, `map.conf`, and `screenshot.png`. If not, then drop a message regarding it in the PR 
+## Testing the Map
+### 1. Playing the map
+- 
+
 
 # Individual sources
 ## GreenBlob's message contents 
