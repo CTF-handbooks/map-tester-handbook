@@ -77,12 +77,28 @@ The Map PRs have labels which indicate their current stage in development. You s
 - Extract the ZIP folder and select the particular map folder that has been added by the author of the PR within the extracted folders. In the example PR mentioned, the folder is `sewer_village`
 - After successfully identifying the new map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer.
 - You have now retrieved the required map folder!
-> Make sure that the map has all the required files, namely, `map.mts`, `map.conf`, and `screenshot.png`. If not, then drop a message regarding it in the PR 
+> Make sure that the map has all the required files, namely, `map.mts`, `map.conf`, and `screenshot.png`. If not, then drop a message regarding it in the PR unless not addressed by others.
 ## Testing the Map
-### 1. Playing the map
-- 
+### 1. Making the world
+- Open your Minetest client and make sure you are in the `Start Game` tab.
+- Click the `capturetheflag` game icon. It looks like this:
+![Game icon](game_icon.png)
+- Click the `New World` button.
+- Let's name this world as "testing", but you can name it as you wish. It is important that you make sure that you are setting the world's mapgen as `singlenode`, like the below screenshot.
+![Mapgen example](mapgen.png)
+- Finally, click `Create`.
+### 2. Playing the game
+- Select the new world that you just created.
+- Disable `Creative Mode` to be able to play a match of CTF. It is your choice whether you want `Enable Damage` on or off.
+- Then click `Play Game` to begin. An example if shown below.
+![FInal Settings before playing](final_settings_before_playing.png)
+### 3. Choosing the Map
+> You will need the `ctf_admin` privilege to run most of the commands in this handbook. So, grant yourself the privs using `/grantme ctf_admin`. If you would like other privileges suck as `fly`, `nolcip`, `fast`, etc., then running the `/grantme all` command would cover them all.
 
-
+Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map,
+- Run the `/maps` command.
+- Select the map you want to test from the map list.
+- Press `Skip to Map`
 # Individual sources
 ## GreenBlob's message contents 
 1. Map basics
