@@ -95,10 +95,16 @@ The Map PRs have labels which indicate their current stage in development. You s
 ### 3. Choosing the Map
 > You will need the `ctf_admin` privilege to run most of the commands in this handbook. So, grant yourself the privs using `/grantme ctf_admin`. If you would like other privileges suck as `fly`, `nolcip`, `fast`, etc., then running the `/grantme all` command would cover them all.
 
-Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map,
-- Run the `/maps` command.
-- Select the map you want to test from the map list.
-- Press `Skip to Map`
+Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map, run `/ctf_next -f <map_folder>` . In the case of the example PR, it would be `/ctf_next -f sewer_village`.
+
+### 4. Map Requirements
+Basics:
+- There are no errors that show up (red text in the chat) when loading/playing the map. The error would indicate what is causing the issue.
+- The area under the flag, that is the floor of the base, should be unbreakable and have an area of 5x5 blocks at minimum.
+- The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) above ground and/or indestructible variants of blocks on the walls of the map that are below the ground and the floor of the map being destructible as well. 
+- It has the Red Barriers that disappear when build time gets over. Check if all of these are placed properly, no areas that require it are missing, and they get removed without any remaining.
+- Chests work properly, that is, they can be opened.
+- Flags can be captured without any bugs.
 # Individual sources
 ## GreenBlob's message contents 
 1. Map basics
