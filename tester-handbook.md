@@ -24,7 +24,6 @@
 	- Click on the `+` icon to install it.
 2. `WorldEdit` mod.
 	- Download it as you did for the CTF game, but you should have `Mods` as the category set.
-	- 
 ## Structure of the Repository
 
 ### 1. Where do I find maps for CTF?
