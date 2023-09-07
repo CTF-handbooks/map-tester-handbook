@@ -24,6 +24,8 @@
 	- Click on the `+` icon to install it.
 2. `WorldEdit` mod.
 	- Download it as you did for the CTF game, but you should have `Mods` as the category set.
+3. Go to the `Settings` tab -> `Advanced Settings` and enable the "Append item name" setting. This allows you to get the technical name of an item when you hover over it in the inventory.
+
 ## Structure of the Repository
 
 ### 1. Where do I find maps for CTF?
@@ -126,8 +128,8 @@ Upon starting the game, you will be playing like how the server works, with a ra
 > To count ores in a region, you can use WorldEdit.
 > 1. Go to the first coordinate of the region and run `//1`.
 > 2. Go the second position and run `//2`.
-> 3. Replace all the ores (using its technical name) you want to find the count for with air. You will see how many were replaced, giving the count. If the ore is mese ore (`default:stone_with_mese`), then run `//r default:stone_with_mese air`.
-> A set of common ore technical names you may want to test for are 
+> 3. Replace all the ores (using its *technical name*) you want to find the count for with air. You will see how many were replaced, giving the count. If the ore is mese ore (`default:stone_with_mese`), then run `//r default:stone_with_mese air`.
+> *Tip: If you have enabled the "Append item name" setting, search the ore you want the name for in the inventory and hover over it. **(Make sure it isn't the indestructible variant)** *
 # Individual sources
 ## -sniper-'s message contents
 You can test any map anytime. It is recommended to first test Pull requests with a `Review required` label because other maps usually already have bugs/issues.
