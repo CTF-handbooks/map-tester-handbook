@@ -17,11 +17,14 @@
 > Ignore the above ;)
 
 ## Prequisites
-First of all, you need the `Capture the Flag` game. To do so,
-- Go to the `Content` Tab in your Minetest client.
-- Click `Browse Online Content` 
-- Search for `capturetheflag` (make sure that the `Games` category is selected)
-- Click on the `+` icon to install it.
+1. The `Capture the Flag` game. To get it,
+	- Go to the `Content` Tab in your Minetest client.
+	- Click `Browse Online Content` 
+	- Search for `capturetheflag` (make sure that the `Games` category is selected)
+	- Click on the `+` icon to install it.
+2. `WorldEdit` mod.
+	- Download it as you did for the CTF game, but you should have `Mods` as the category set.
+	- 
 ## Structure of the Repository
 
 ### 1. Where do I find maps for CTF?
@@ -78,8 +81,16 @@ The Map PRs have labels which indicate their current stage in development. You s
 - After successfully identifying the new map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer.
 - You have now retrieved the required map folder!
 > Make sure that the map has all the required files, namely, `map.mts`, `map.conf`, and `screenshot.png`. If not, then drop a message regarding it in the PR unless not addressed by others.
+
 ## Testing the Map
-### 1. Making the world
+### 1. Map config
+The configuration settings for the map are in the `<map_folder>/map.conf` file. It *should* satisfy the list below:
+- The map should be enabled. (`enable = true`)
+- The map has a license. It should be in the family of free (as in freedom) culture licenses like `CC BY-SA 4.0`. Note that not all Creative Commons licenses are free. For e.g., `CC BY-ND`.
+- The initial items for the map are 
+- It has a suitable map hint. 
+You can check for these before or after testing the map in-game.
+### 2. Making the world
 - Open your Minetest client and make sure you are in the `Start Game` tab.
 - Click the `capturetheflag` game icon. It looks like this:
 ![Game icon](game_icon.png)
@@ -87,68 +98,36 @@ The Map PRs have labels which indicate their current stage in development. You s
 - Let's name this world as "testing", but you can name it as you wish. It is important that you make sure that you are setting the world's mapgen as `singlenode`, like the below screenshot.
 ![Mapgen example](mapgen.png)
 - Finally, click `Create`.
-### 2. Playing the game
+### 3. Playing the game
 - Select the new world that you just created.
 - Disable `Creative Mode` to be able to play a match of CTF. It is your choice whether you want `Enable Damage` on or off.
+- To enable the `WorldEdit` mod, press `Select Mods` and double click the `WorldEdit` mod name to enable it.
 - Then click `Play Game` to begin. An example if shown below.
 ![FInal Settings before playing](final_settings_before_playing.png)
-### 3. Choosing the Map
+### 4. Choosing the Map
 > You will need the `ctf_admin` privilege to run most of the commands in this handbook. So, grant yourself the privs using `/grantme ctf_admin`. If you would like other privileges suck as `fly`, `nolcip`, `fast`, etc., then running the `/grantme all` command would cover them all.
 
 Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map, run `/ctf_next -f <map_folder>` . In the case of the example PR, it would be `/ctf_next -f sewer_village`.
 
-### 4. Map Requirements
-Basics:
+### 5. Map Requirements
+#### Basics
 - There are no errors that show up (red text in the chat) when loading/playing the map. The error would indicate what is causing the issue.
 - The area under the flag, that is the floor of the base, should be unbreakable and have an area of 5x5 blocks at minimum.
 - The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) above ground and/or indestructible variants of blocks on the walls of the map that are below the ground and the floor of the map being destructible as well. 
 - It has the Red Barriers that disappear when build time gets over. Check if all of these are placed properly, no areas that require it are missing, and they get removed without any remaining.
-- Chests work properly, that is, they can be opened.
+- Chests are functional.
 - Flags can be captured without any bugs.
+- The team boundaries behave as they should:
+	- Player should get teleported during build time if they are *in* the red barrier. This is where the team zones overlap.
+	- All the boundaries of the team zone are till where they should be and work as intended. You can test this by going to the edges and walls of the map.
+#### Mechanics
+- All the teams should have an **equal chance of winning**. This includes, base position, balance, ore count, etc.
+> To count ores in a region, you can use WorldEdit.
+> 1. Go to the first coordinate of the region and run `//1`.
+> 2. Go the second position and run `//2`.
+> 3. Replace all the ores (using its technical name) you want to find the count for with air. You will see how many were replaced, giving the count. If the ore is mese ore (`default:stone_with_mese`), then run `//r default:stone_with_mese air`.
+> A set of common ore technical names you may want to test for are 
 # Individual sources
-## GreenBlob's message contents 
-1. Map basics
-    * Flags
-    * Unbreakable floor under flags
-    * Team chests added for each team
-    * Indestructible barrier glass around the map (Or any other unbreakable material)
-    * Roof that prevents players from escaping
-    * Indestructible red barrier glass in the middle of the map (Indestructible red barrier stone for underground)
-    * Indestructible blocks at the bottom of the map
-    * Barriers are all placed properly
-    * Red barriers disappear when the match starts
-    * Map does not contain blocks that are not supported
-    * Players should be able to capture the flag
-    
-    **Players should not be able to escape the map and the map should work properly**
-
-2. Team zones
-    * Teleports player back when crosses red barrier during build time
-    * Does not teleport the player back when the player did not cross the red barrier
-    * Red barrier covers all the empty spaces
-    
-    **Players should not be teleported back if they are standing within their team boundary**
-    (Make sure to check all the corners of the team boundary. For example, the areas behind the team base, in the air, below in the ground, etc....)
-
-3. Map config
-    * Map is enabled
-    * Map has a license (Recommended: CC BY-SA 4.0)
-    * Map has a suitable hint
-    * Map has initial stuff that is compatible with the map (Take notes of the terrain, the ores, etc....)
-    * Chest zones are added
-    * Team zones are set for all the existing teams
-
-4. Balance:
-    * No team has a better position than the others
-    * No team has advantages
-    * The teams have about the same amount of ores and chests
-
-   **All teams must have an equal chance of winning**
-
-5. Pull request
-    * Screenshot included with the PR (The screenshot ratio must be 3:2)
-    * PR includes the following files: map.mts, map.conf, and screenshot.png
-
 ## -sniper-'s message contents
 You can test any map anytime. It is recommended to first test Pull requests with a `Review required` label because other maps usually already have bugs/issues.
 
