@@ -93,9 +93,11 @@ You can check for these before or after testing the map in-game.
 ### 2. Making the world
 - Open your Minetest client and make sure you are in the `Start Game` tab.
 - Click the `capturetheflag` game icon. It looks like this:
+
 ![Game icon](game_icon.png)
 - Click the `New World` button.
 - Let's name this world as "testing", but you can name it as you wish. It is important that you make sure that you are setting the world's mapgen as `singlenode`, like the below screenshot.
+
 ![Mapgen example](mapgen.png)
 - Finally, click `Create`.
 ### 3. Playing the game
