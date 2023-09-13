@@ -3,19 +3,6 @@
 ## Table of Contents
 > I will do later; the headings will be changed
 
-> ## Outline
-> 1. Labels to be aware of ✅
-> 2. PR scheme ✅
-> 3. Map works/errors 
-> 4. ^ Some error specifics
-> 5. Flags and the base
-> 6. Team zones and testing process
-> 7. Config (to be discussed later) (also includes proper fields filled)
-> 8. Design/glitches/mistakes/inconsistencies, balance/opinion
-> 9. Screenshot 
-> 10. More to be included and discussed upon
-> Ignore the above ;)
-
 ## Prequisites
 1. The `Capture the Flag` game. To get it,
 	- Go to the `Content` Tab in your Minetest client.
@@ -84,6 +71,7 @@ The Map PRs have labels which indicate their current stage in development. You s
 > Make sure that the map has all the required files, namely, `map.mts`, `map.conf`, and `screenshot.png`. If not, then drop a message regarding it in the PR unless not addressed by others.
 
 ## Testing the Map
+
 ### 1. Map config
 The configuration settings for the map are in the `<map_folder>/map.conf` file. It *should* satisfy the list below:
 - The map should be enabled. (`enable = true`)
@@ -91,6 +79,7 @@ The configuration settings for the map are in the `<map_folder>/map.conf` file. 
 - The initial items for the map are 
 - It has a suitable map hint. 
 You can check for these before or after testing the map in-game.
+
 ### 2. Making the world
 - Open your Minetest client and make sure you are in the `Start Game` tab.
 - Click the `capturetheflag` game icon. It looks like this:
@@ -101,18 +90,21 @@ You can check for these before or after testing the map in-game.
 
 ![Mapgen example](mapgen.png)
 - Finally, click `Create`.
+
 ### 3. Playing the game
 - Select the new world that you just created.
 - Disable `Creative Mode` to be able to play a match of CTF. It is your choice whether you want `Enable Damage` on or off.
 - To enable the `WorldEdit` mod, press `Select Mods` and double click the `WorldEdit` mod name to enable it.
 - Then click `Play Game` to begin. An example if shown below.
 ![FInal Settings before playing](final_settings_before_playing.png)
+
 ### 4. Choosing the Map
 > You will need the `ctf_admin` privilege to run most of the commands in this handbook. So, grant yourself the privs using `/grantme ctf_admin`. If you would like other privileges suck as `fly`, `nolcip`, `fast`, etc., then running the `/grantme all` command would cover them all.
 
 Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map, run `/ctf_next -f <map_folder>` . In the case of the example PR, it would be `/ctf_next -f sewer_village`.
 
 ### 5. Map Requirements
+
 #### Basics
 - There are no errors that show up (red text in the chat) when loading/playing the map. The error would indicate what is causing the issue.
 - The area under the flag, that is the floor of the base, should be unbreakable and have an area of 5x5 blocks at minimum.
@@ -123,29 +115,23 @@ Upon starting the game, you will be playing like how the server works, with a ra
 - The team boundaries behave as they should:
 	- Player should get teleported during build time if they are *in* the red barrier. This is where the team zones overlap.
 	- All the boundaries of the team zone are till where they should be and work as intended. You can test this by going to the edges and walls of the map.
+- Map is bug-free - no holes leading to the void, "misplaced" blocks/accidental inconsistencies, does not contain unsupported blocks. 
+
 #### Mechanics
 - All the teams should have an **equal chance of winning**. This includes, base position, balance, ore count, etc.
 > To count ores in a region, you can use WorldEdit.
 > 1. Go to the first coordinate of the region and run `//1`.
 > 2. Go the second position and run `//2`.
 > 3. Replace all the ores (using its *technical name*) you want to find the count for with air. You will see how many were replaced, giving the count. If the ore is mese ore (`default:stone_with_mese`), then run `//r default:stone_with_mese air`.
-> *Tip: If you have enabled the "Append item name" setting, search the ore you want the name for in the inventory and hover over it. **(Make sure it isn't the indestructible variant)** *
-# Individual sources
-## -sniper-'s message contents
-You can test any map anytime. It is recommended to first test Pull requests with a `Review required` label because other maps usually already have bugs/issues.
+> *Tip: If you have enabled the "Append item name" setting, search the ore you want the name for in the inventory and hover over it. **(Make sure it isn't the indestructible variant)**
 
-What should map tester look for? Issues or bugs such as:
+- The map should be unique and not be similar to other maps. Maps that are too plain or resemble existing ones too closely that they do not add any new value will get rejected. The design of the map should encourage differing gameplay and tactics, along with creativity from the map maker's part.
 
-- First map tester should check if map works in CTF game.
-- Map should be unique and not similar to other maps. So this means that most of plain maps will be rejected if they are not interesting. The design of a map should encourage differing gameplay and tactics.
-- It should be fun to play on it.
-- Maps shouldn't be glitchy (i.e., no holes which lead into voids, no wrongly placed barriers). Barriers should be placed properly, red barrier should disappear on match start.
-- Maps should not contain not-supported blocks (such as chests, rails, butterflies...). If there is not-supported block on a map, you will see red error in chat, starting with `Failed to resolve node name...`
-- Map must have a **valid Free Software/Open Source license** . There should be a line in `map.conf`:` license = <license_name>`
-- Maps should be reasonably balanced - i.e.: two team of equal ability would have the same chance of winning. One team should not have advantage (for example more ores, better position...).
-- Players shouldn't be able to escape from the map - i.e. go outside of the barrier
-- Pull request (=PR) should contain `map.mts`, `map.conf` and `screenshot.png`. If PR contain zip files for example, then it is not created properly. Screenshot should have ratio 3:2 (750x500px for example)
-- Player should be able to pick and capture flag.
-- Something what I have probably forgotten to add ¯\_(ツ)_/¯
+### 6. *Your opinion is the key!*
+What's next? It's your thoughts on the map! Is it fun? What do you feel when you play it? How do you think it can be improved if need? It all matters.
 
-And finally, write your review as a comment in PR. **Tell your opinion** (fun/not fun, missing license, doesn't work...). Every opinion matters.
+### 7. Posting your review
+To post your review, go to the ***Conversation*** tab within the PR on GitHub. Write your review in the text box and press the green `Comment` button.
+
+---
+Last but not least, thank you for going through this handbook. Welcome to the Map Tester team, and enjoy!
