@@ -1,3 +1,4 @@
+[CTF Game Header](header.png)
 # Map Tester Handbook
 
 ## Table of Contents
