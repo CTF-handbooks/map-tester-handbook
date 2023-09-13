@@ -1,3 +1,4 @@
+![CTF Game Header](header.png)
 <h1 align="center">Map Tester Handbook</h1>
 <h2 align="center">About</h2>
 
