@@ -1,7 +1,7 @@
 <p align="center">
   <img src="images/header.png"/>
 </p>
-<h1 align="center">Map Tester Handbook</h1>
+<h1 align="center">Map Tester Handbook <b>(WIP)</b></h1>
 
 ## About
 
