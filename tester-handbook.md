@@ -49,22 +49,22 @@ Below is a list of a few terms you should be aware of while map making. Don't be
 #### *Where to find Map PRs?*
 - Go to the [maps repository](https://github.com/mt-CTF/maps) on your web browser.
 - Click the "Pull Requests" section like this:
-![PR button](pr-s_section_example.png)
+![PR button](images/pr-s_section_example.png)
 - You will come to notice PRs with some labels. If you click the PR, it will take you to it.
 - There will be a series of tabs that will help you navigate through the things related to it. (An example image is shown below)
-![Intra-PR Ribbon Example](ribbon_example.png)
+![Intra-PR Ribbon Example](images/ribbon_example.png)
 - You can discuss about the PR and leave your reviews in the ***Conversation*** section. The ***Commits*** tab lists the commits that the (will do).
 
 #### *Labels on Pull Requests*
 The Map PRs have labels which indicate their current stage in development. You should look for the ***"New Map"*** and ***"Review Required :mag:"***. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, ***"Action/change needed :grey_exclamation:"*** and so on. All these describe about a particular PR. An example of one that you can test is:
-![Labels Example](label_example.png)
+![Labels Example](images/label_example.png)
 
 ## Getting the PR files for testing
 - Go the the `Pull Requests` and click on the Map PR you would like to review. 
 - Click on the blue text indicating the `<username>:<branch-of-their-fork>` as shown below.
-![PR Fork/Branch Example](pr-fork-branch-example.png)
+![PR Fork/Branch Example](images/pr-fork-branch-example.png)
 - After doing so, use the `Download ZIP` option like this:
-![Getting the files Example](pr-forked-repo-code-example.png)
+![Getting the files Example](images/pr-forked-repo-code-example.png)
 - Extract the ZIP folder and select the particular map folder that has been added by the author of the PR within the extracted folders. In the example PR mentioned, the folder is `sewer_village`
 - After successfully identifying the new map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer.
 - You have now retrieved the required map folder!
@@ -84,11 +84,11 @@ You can check for these before or after testing the map in-game.
 - Open your Minetest client and make sure you are in the `Start Game` tab.
 - Click the `capturetheflag` game icon. It looks like this:
 
-![Game icon](game_icon.png)
+![Game icon](images/game_icon.png)
 - Click the `New World` button.
 - Let's name this world as "testing", but you can name it as you wish. It is important that you make sure that you are setting the world's mapgen as `singlenode`, like the below screenshot.
 
-![Mapgen example](mapgen.png)
+![Mapgen example](images/mapgen.png)
 - Finally, click `Create`.
 
 ### 3. Playing the game
@@ -96,7 +96,7 @@ You can check for these before or after testing the map in-game.
 - Disable `Creative Mode` to be able to play a match of CTF. It is your choice whether you want `Enable Damage` on or off.
 - To enable the `WorldEdit` mod, press `Select Mods` and double click the `WorldEdit` mod name to enable it.
 - Then click `Play Game` to begin. An example if shown below.
-![FInal Settings before playing](final_settings_before_playing.png)
+![FInal Settings before playing](images/final_settings_before_playing.png)
 
 ### 4. Choosing the Map
 > You will need the `ctf_admin` privilege to run most of the commands in this handbook. So, grant yourself the privs using `/grantme ctf_admin`. If you would like other privileges suck as `fly`, `nolcip`, `fast`, etc., then running the `/grantme all` command would cover them all.
