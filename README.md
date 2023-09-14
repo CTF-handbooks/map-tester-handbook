@@ -10,7 +10,7 @@ A detailed guide to testing maps for the [Capture the Flag game by rubenwardy](h
 - `[tester-handbook.md](tester-handbook.md)`: The handbook on testing maps. Click the blue link to read!
 
 ## Credits
-Parts of this handbook are derived from lists by `-sniper-` and @a_blob .  Many thanks to them!
+Parts of this handbook are derived from lists by `-sniper-` and [GreenBlob](https://github.com/a_blob) .  Many thanks to them!
 
 ## Licenses
 - `[CTF Header](images/header.png)`: CC-BY-3.0 by [SuddenSFD](https://github.com/SuddenSFD)
