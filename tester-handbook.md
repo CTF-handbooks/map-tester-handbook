@@ -1,9 +1,12 @@
-# Map Tester Handbook
+# The Map Tester's Handbook
 
 ## Table of Contents
-> I will do later; the headings will be changed
+- [Prerequisites](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#prequisites)
+- [Structure of the CTF Maps Repository](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#structure-of-the-ctf-maps-repository)
+	1. [Where do I find the CTF maps?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#1-where-do-i-find-the-ctf-maps)
+	2. 
 
-## Prequisites
+## Prerequisites
 1. The `Capture the Flag` game. To get it,
 	- Go to the `Content` Tab in your Minetest client.
 	- Click `Browse Online Content` 
@@ -11,11 +14,11 @@
 	- Click on the `+` icon to install it.
 2. `WorldEdit` mod.
 	- Download it as you did for the CTF game, but you should have `Mods` as the category set.
-3. Go to the `Settings` tab -> `Advanced Settings` and enable the "Append item name" setting. This allows you to get the technical name of an item when you hover over it in the inventory.
+3. Go to the `Settings` tab -> `Advanced Settings` and enable the "Append item name" setting. This allows you to get the technical name of an item when you hover over it in the inventory. You will use this later.
 
-## Structure of the Repository
+## Structure of the CTF Maps Repository
 
-### 1. Where do I find maps for CTF?
+### 1. Where do I find the CTF maps?
 All the [maps on CTF](https://github.com/mt-CTF/maps) are in a repository on [GitHub](https://en.wikipedia.org/wiki/GitHub), the website via which you may be reading this. GitHub is one of the “many platforms and cloud-based services for software development and version control using `Git`, allowing developers to store and manage their code.” But no worries, you don't need to be a full-stack coder to use Git. 
 
 ### 2. What do the folders and files mean?
