@@ -1,4 +1,4 @@
-# The Map Tester's Handbook
+no# The Map Tester's Handbook
 
 ## Table of Contents
 - [Prerequisites](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#prequisites)
@@ -96,7 +96,7 @@ The configuration settings for the map are in the `<map_folder>/map.conf` file. 
 - The map should be enabled. (`enable = true`)
 - The map has a license. It should be in the family of free (as in freedom) culture licenses like `CC BY-SA 4.0`. Note that not all Creative Commons licenses are free. For e.g., `CC BY-ND` - these are not accepted.
 - The initial items for the map are 
-- It has a suitable map hint. 
+- If it has hint, it should be suitable for the map.
 You can check for these before or after testing the map in-game.
 
 ### 2. Making the world
