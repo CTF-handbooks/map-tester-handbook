@@ -1,4 +1,4 @@
-no# The Map Tester's Handbook
+# The Map Tester's Handbook
 
 ## Table of Contents
 - [Prerequisites](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#prequisites)
