@@ -148,7 +148,7 @@ Upon starting the game, you will be playing like how the server works, with a ra
 > To count ores in a region, you can use WorldEdit.
 > 1. Go to the first coordinate of the region and run `//1`.
 > 2. Go the second position and run `//2`.
-> 3. Suppress all the ores you want to find the count for using `//suppress <node name>`. Make sure you are correctly typing the node name, for example, for Mese Ore you will do `//suppress Mese Ore`.
+> 3. Suppress (simply hiding them) all the ores you want to find the count for using `//suppress <node name>`. Make sure you are correctly typing the node name, for example, for Mese Ore you will do `//suppress Mese Ore`. Use `//restore` in a selected region to bring back the hidden nodes.
 
 - The map should be unique and not be similar to other maps. Maps that are too plain or resemble existing ones too closely that they do not add any new value have high chances of getting rejected. The design of the map should encourage differing gameplay and tactics, along with creativity from the map maker's part.
 
