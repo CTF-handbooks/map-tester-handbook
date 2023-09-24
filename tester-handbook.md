@@ -30,24 +30,25 @@
 	- Click on the `+` icon to install it.
 2. `WorldEdit` mod.
 	- Download it as you did for the CTF game, but you should have `Mods` as the category set.
-3. Go to the `Settings` tab -> `Advanced Settings` and enable the "Append item name" setting. This allows you to get the technical name of an item when you hover over it in the inventory. You will use this later.
 
 ## Structure of the CTF Maps Repository
 
 ### 1. Where do I find the CTF maps?
-All the [maps on CTF](https://github.com/mt-CTF/maps) are in a repository on [GitHub](https://en.wikipedia.org/wiki/GitHub), the website via which you may be reading this. GitHub is one of the “many platforms and cloud-based services for software development and version control using `Git`, allowing developers to store and manage their code.” But no worries, you don't need to be a full-stack coder to use Git.
+All the [maps on CTF](https://github.com/mt-CTF/maps) are in a repository on [GitHub](https://en.wikipedia.org/wiki/GitHub), the website via which you may be reading this.
 
 ### 2. What do the folders and files mean?
 The repository contains folders dedicated to each map. For example, the folder containing the required files for the “Intervention in the Ice Age” Map is in the folder `iceage`. The files within a map folder in the repository should be as shown below:
 ```
 <map folder>
+  ├── barriers.data
   ├── map.conf
   ├── map.mts
   └── screenshot.png
 ```
-1. `map.conf`: The file contains metadata about various constants and fields essential to the map.
-2. `map.mts`: A schematic file (`.mts`) is used to import the map into the game world.
-3. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and is needed to have an aspect ratio of 3:2 (600×400px is suggested).
+1. `barriers.data` : The file containing barrier data for the map.
+2. `map.conf`: The file contains metadata about various values and fields essential to the map.
+3. `map.mts`: A schematic file (`.mts`) is used to import the map into the game world.
+4. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and is needed to have an aspect ratio of 3:2 (600×400px is suggested).
 
 ## What is GitHub and Git?
 GitHub is a platform that hosts Git repositories and provides developers with several tools to assist their projects. Git is a free and open source version control system designed to handle everything from small to very large projects. Basically, GitHub is a site for managing code and various other projects using the Git. For now, this handbook will only cover the basic ways of obtaining the files you require for testing maps without the need of any command line interface. The handbook for that is a work in progress.
@@ -72,20 +73,23 @@ Below is a list of a few terms you should be aware of while testing maps and usi
 - You will come to notice PRs with some labels. If you click the PR, it will take you to it.
 - There will be a series of tabs that will help you navigate through the things related to the specific PR. (An example image is shown below)
 ![Intra-PR Ribbon Example](images/ribbon_example.png)
-- You discuss about the PR and post your reviews in the ***Conversation*** section. The ***Commits*** tab lists the commit history (basically the various series of changes made in it).
+- You discuss about the PR and post your reviews in the ***Conversation*** section. The ***Commits*** tab lists the commit history (basically the various series of changes made in it). Similarly, the **Files changed** tab mentions the files that have been added and changed.
 
 #### *Labels on Pull Requests*
-The Map PRs have labels which indicate their current stage in development and give information about them. You should look for the ***"New Map"*** and ***"Review Required :mag:"*** as tjeu are the ones that need review. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, ***"Action/change needed :grey_exclamation:"*** and so on. An example of one that you can test is:
+The Map PRs have labels which indicate their current stage in development and give information about them. You should look for the ***"New Map"*** and ***"Review Required :mag:"*** as they are the ones that need to be reviewed. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, ***"Action/change needed :grey_exclamation:"*** and so on. An examplar PR that you can test is:
 ![Labels Example](images/label_example.png)
 
 ## Fetching PR files for testing
 - Go to the `Pull Requests` tab and select the PR you would like to review.
-- Click on the blue text indicating the `<username>:<branch-of-their-fork>` as shown below.
+- Click on the blue text indicating the `<pr-author>:<branch-of-their-fork>` as shown below.
 ![PR Fork/Branch Example](images/pr-fork-branch-example.png)
 - After doing so, use the `Download ZIP` option like this:
 ![Getting the files Example](images/pr-forked-repo-code-example.png)
 - Extract the ZIP folder and select the particular map folder that has been added by the author of the PR within the extracted folders. In the example PR mentioned, the folder is `sewer_village`
 - After successfully identifying the new map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer.
+
+> There can be times where you may not know where your Minetest folder is on some operating systems. Going to the `About` section in Minetest and pressing the "Open User Data Directory" button should lead you there.  
+
 - You have now retrieved the required map folder!
 > Make sure that the map has all the required files, namely, `map.mts`, `map.conf`, and `screenshot.png`. If not, then drop a message regarding it in the PR if not addressed by others already.
 
@@ -140,11 +144,11 @@ Upon starting the game, you will be playing like how the server works, with a ra
 
 #### Mechanics
 - All the teams should have an **equal chance of winning**. This includes, base position, balance, ore count, etc.
+
 > To count ores in a region, you can use WorldEdit.
 > 1. Go to the first coordinate of the region and run `//1`.
 > 2. Go the second position and run `//2`.
-> 3. Replace all the ores (using its *technical name*) you want to find the count for with air. You will see how many were replaced, thereby giving the count. If the ore is mese ore (`default:stone_with_mese`), then run `//r default:stone_with_mese air`.
-> *Tip: As you have enabled the "Append item name" setting, search the ore you want the name for in the inventory and hover over it to get it's technical name. **(Make sure it isn't the indestructible variant by mistake)**
+> 3. Suppress all the ores you want to find the count for using `//suppress <node name>`. Make sure you are correctly typing the node name, for example, for Mese Ore you will do `//suppress Mese Ore`.
 
 - The map should be unique and not be similar to other maps. Maps that are too plain or resemble existing ones too closely that they do not add any new value have high chances of getting rejected. The design of the map should encourage differing gameplay and tactics, along with creativity from the map maker's part.
 
