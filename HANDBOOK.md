@@ -143,9 +143,7 @@ Upon starting the game, you will be playing like how the server works, with a ra
 - It has the Red Barriers that disappear when build time is over. Check if all of these are placed properly, no areas that require it are missing, and they get removed without any remaining.
 - Chests are functional.
 - Flags can be captured without any bugs.
-- The team boundaries behave as they should:
-	- Players should get teleported during build time if they are *in* the red barrier. This is where the team zones overlap.
-	- All the boundaries of the team zone are to the extent of where they should be and work as intended. You can test this by going to the edges and walls of the map too.
+- All the team zones of the team zone are to the extent of where they should be and work as intended. You can test if they work correctly by making sure that you do not get teleported back to the base while at the edges of the walls of the map and the build-time barriers.
 - Map is bug-free - no holes leading to the void, "misplaced" blocks/accidental inconsistencies, does not contain unsupported blocks, and so on.
 
 #### *Mechanics*
@@ -154,7 +152,7 @@ Upon starting the game, you will be playing like how the server works, with a ra
 > To count ores in a region, you can use WorldEdit.
 > 1. Go to the first coordinate of the region and run `//1`.
 > 2. Go to the second position and run `//2`.
-> 3. Suppress (simply hiding them) all the ores you want to find the count for using `//suppress <node name>`. Ensure you are correctly typing the node name. For example, you will do `//suppress Mese Ore` for "Mese Ore" (hover over blocks in the inventory to obtain their proper name). Use `//restore` in a selected region to bring back the hidden nodes.
+> 3. Suppress (simply hiding them) all the ores you want to find the count (gets printed in the chat) by using `//suppress <node name>`. Ensure you are correctly typing the node name. For example, you will do `//suppress Mese Ore` for "Mese Ore" (hover over blocks in the inventory to obtain their proper name). Use `//restore` in a selected region to bring back the hidden nodes.
 
 - The map should be unique and not be similar to other maps. Maps that are too plain or resemble existing ones so closely that they do not add new value have a high chance of rejection. The design of the map should encourage differing gameplay and tactics, along with creativity on the map maker's part.
 
