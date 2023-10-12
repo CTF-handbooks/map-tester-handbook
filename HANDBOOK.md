@@ -105,7 +105,7 @@ The Map PRs have labels that indicate their current development stage and give i
 The configuration settings for the map are in the `<map_folder>/map.conf` file. It *should* satisfy the list below:
 - The map should be enabled. (`enable = true`)
 - The map has a license. It should be in the family of free (as in freedom) culture licenses like `CC BY-SA 4.0`. Note that not all Creative Commons licenses are free. For e.g., `CC BY-ND` - these are not accepted.
-- The initial items for the map are 
+- The initial items for the map are appropriate.
 - If the map has a hint, it should be relevant for it.
 You can check for these before or after testing the map in-game.
 
