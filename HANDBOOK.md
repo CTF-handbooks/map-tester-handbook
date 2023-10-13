@@ -1,6 +1,7 @@
 # The Map Tester's Handbook
 
 ## Table of Contents
+
 - [Prerequisites](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#prequisites)
 - [Structure of the CTF Maps Repository](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#structure-of-the-ctf-maps-repository)
 	1. [Where do I find the CTF maps?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#1-where-do-i-find-the-ctf-maps)
@@ -24,6 +25,7 @@
 
 ---
 ## Prerequisites
+
 1. The `Capture the Flag` game. To get it,
 	- Go to the `Content` Tab in your Minetest client.
 	- Click `Browse Online Content` 
@@ -33,12 +35,15 @@
 	- Download it as you did for the CTF game, but you should have `Mods` as the category set.
 
 ---
+
 ## Structure of the CTF Maps Repository
 
 ### 1. Where do I find the CTF maps?
+
 All the [maps on CTF](https://github.com/mt-CTF/maps) are in a repository on [GitHub](https://en.wikipedia.org/wiki/GitHub), the website via which you may be reading this.
 
 ### 2. What do the folders and files mean?
+
 The repository contains folders dedicated to each map. For example, the folder containing the required files for the “Intervention in the Ice Age” Map is in the folder `iceage`. The files within a map folder in the repository should be as shown below:
 ```
 <map folder>
@@ -53,10 +58,12 @@ The repository contains folders dedicated to each map. For example, the folder c
 4. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and needs to have an aspect ratio of 3:2 (600×400px is suggested).
 
 ## What is GitHub and Git?
+
 GitHub is a platform that hosts Git repositories and provides developers with several tools to assist their projects. Git is a free and open-source version control system designed to handle everything from small to very large projects. Basically, GitHub is a site for managing code and various other projects using Git. For now, this handbook will only cover the basic ways of obtaining the files you require for testing maps without the need of any command line interface. The handbook for that is a work in progress.
 
 ---
 ## Git Terminology
+
 Below is a list of a few terms you should be aware of while testing maps and using GitHub. Don't be intimidated by these; keep them in mind for future reference.
 - A **repository**, is the remote storage in which code is stored.
 > In this case, the map's repository only contains the map folders and their respective files.
@@ -69,8 +76,11 @@ Below is a list of a few terms you should be aware of while testing maps and usi
 - A **pull request** (PR) refers to when you make changes in one of your branches and try to integrate those changes with the main repository.
 
 ---
+
 ## How do you know which maps to review?
+
 #### *Where to find Map PRs?*
+
 - Go to the [maps repository](https://github.com/mt-CTF/maps) on your web browser.
 - Click the "Pull Requests" section:
 ![PR button](images/pr-s_section_example.png)
@@ -80,11 +90,13 @@ Below is a list of a few terms you should be aware of while testing maps and usi
 - You discuss about the PR and post your reviews in the ***Conversation*** section. The ***Commits*** tab lists the commit history (basically the various series of changes made in it). Similarly, the **Files changed** tab mentions the files that have been added and changed.
 
 #### *Labels on Pull Requests*
+
 The Map PRs have labels that indicate their current development stage and give information about them. You should look for the ***"New Map"*** and ***"Review Required :mag:"*** as they are the ones that need to be reviewed. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, ***"Action/change needed :grey_exclamation:"*** and so on. An good example of a PR that you can test is:
 ![Labels Example](images/label_example.png)
 
 ---
 ## Fetching PR files for testing
+
 - Go to the `Pull Requests` tab and select the PR you would like to review.
 - Click on the blue text indicating the `<pr-author>:<branch-of-their-fork>` as shown below.
 ![PR Fork/Branch Example](images/pr-fork-branch-example.png)
@@ -99,9 +111,11 @@ The Map PRs have labels that indicate their current development stage and give i
 > Make sure that the map has all the required files, namely, `map.mts`, `map.conf`, and `screenshot.png`. If not, then drop a message regarding it in the PR if not addressed by others already.
 
 ---
+
 ## Testing the Map
 
 ### 1. Map config
+
 The configuration settings for the map are in the `<map_folder>/map.conf` file. It *should* satisfy the list below:
 - The map should be enabled. (`enable = true`)
 - The map has a license. It should be in the family of free (as in freedom) culture licenses like `CC BY-SA 4.0`. Note that not all Creative Commons licenses are free. For e.g., `CC BY-ND` - these are not accepted.
@@ -110,6 +124,7 @@ The configuration settings for the map are in the `<map_folder>/map.conf` file. 
 You can check for these before or after testing the map in-game.
 
 ### 2. Making the world
+
 - Open your Minetest client and make sure you are in the `Start Game` tab.
 - Click the `capturetheflag` game icon:
 
@@ -121,6 +136,7 @@ You can check for these before or after testing the map in-game.
 - Finally, click `Create`.
 
 ### 3. Playing the game
+
 - Select the new world that you just created.
 - Disable `Creative Mode` to be able to play a match of CTF. You can disable `Enable Damage` as well.
 - To enable the `WorldEdit` mod, press `Select Mods` and double click the `WorldEdit` mod name to enable it.
@@ -128,6 +144,7 @@ You can check for these before or after testing the map in-game.
 ![Final Settings before playing](images/final_settings_before_playing.png)
 
 ### 4. Selecting the Map
+
 > You will need the `ctf_admin` privilege to run most of the commands in this handbook. So, grant yourself the privs using `/grantme ctf_admin`. If you would like other privileges such as `fly`, `nolcip`, `fast`, etc., then running the `/grantme all` command would cover them all.
 
 Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map, run `/ctf_next -f <map_folder>`. In the case of the example PR, it would be `/ctf_next -f sewer_village`.
@@ -137,17 +154,19 @@ Upon starting the game, you will be playing like how the server works, with a ra
 ### 5. Map Requirements
 
 #### *Basics*
+
 - No errors appear (red text in the chat) when loading/playing the map. The error would mention what is causing the issue, so bring it to the map author's notice.
 - The area under the flag, that is, the floor of the base, should be unbreakable and have an area of 5x5 indestructible blocks at minimum.
-- The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) above ground and/or indestructible variants of blocks on the walls of the map that are above and below the ground and the floor of the map being indestructible as well. 
-- It has the Red Barriers that disappear when build time is over. Check if all of these are placed properly, no areas that require it are missing, and they get removed without any remaining.
+- The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) and/or indestructible variants of blocks as the walls of the map that are above and below the ground, and the floor of the map being indestructible as well. 
+- It has barriers that disappear when build time is over. Check if all of these are placed properly, no areas that necessarily require it are missing
 - Chests are functional.
 - Flags can be captured without any bugs.
-- All the team zones of the team zone are to the extent of where they should be and work as intended. You can test if they work correctly by making sure that you do not get teleported back to the base while at the edges of the walls of the map and the build-time barriers.
+- All the team zones are to the extent of where they should be and work as intended. You can test if they work correctly by making sure that you do not get teleported back to the base while at the edges of the walls of the map and the build-time barriers.
 - Map is bug-free - no holes leading to the void, "misplaced" blocks/accidental inconsistencies, does not contain unsupported blocks, and so on.
 
 #### *Mechanics*
-- All the teams should have an **equal chance of winning**. This includes base position, balance, ore count, etc.
+
+- All the teams should have an **equal chance of winning**. This includes base position, balance of terrain, ore count, etc.
 
 > To count ores in a region, you can use WorldEdit.
 > 1. Go to the first coordinate of the region and run `//1`.
@@ -157,11 +176,13 @@ Upon starting the game, you will be playing like how the server works, with a ra
 - The map should be unique and not be similar to other maps. Maps that are too plain or resemble existing ones so closely that they do not add new value have a high chance of rejection. The design of the map should encourage differing gameplay and tactics, along with creativity on the map maker's part.
 
 ### 6. *Your opinion is the key!*
+
 What's next? It's your thoughts on the map! Is it fun? What do you feel when you play it? How do you think it can be improved if needed? It all matters.
 
 ### 7. Posting your review
+
 To post your review, go to the ***Conversation*** tab within the PR on GitHub. Write your review in the text box and press the green `Comment` button.
 
 ---
 ## Test away!
-Last but not least, thank you for going through this handbook. Use this as a resource or a checklist whenever you'd like to assist yourself. Welcome to the Map Tester team, and enjoy!
+Now that you have completed reading this and capable of testing a map, you can use (`CHECKLIST.md`)[CHECKLIST.md] as a summary of the process so that you never miss any. Thank you, and enjoy your time map PRs for CTF!
