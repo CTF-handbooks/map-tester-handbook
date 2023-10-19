@@ -7,7 +7,7 @@
 
 A detailed guide to testing maps for the [Capture the Flag game by rubenwardy](https://github.com/MT-CTF/capturetheflag) on the [Mintest game engine](https://github.com/minetest/minetest). Maps for the Capture the Flag game are located in the [CTF Maps repository](https://github.com/mt-CTF/maps).
 
-- [`HANDBOOK.md`](HANDBOOK.md): The handbook on testing maps. Click the link to read.
+- [`HANDBOOK.md`](HANDBOOK.md): The handbook on testing maps (written in mind for those who may be unfamiliar with GitHub). Click the link to read.
 - [`CHECKLIST.md`](CHECKLIST.md): A checklist of map testing tasks. You can use this for map testing after you have read [HANDBOOK.md](HANDBOOK.md).
 
 ## Credits
