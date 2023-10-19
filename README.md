@@ -15,4 +15,3 @@ Parts of this handbook are derived from lists by `-sniper-` and [GreenBlob](http
 
 ## Licenses
 - [`CTF Header`](images/header.png): CC-BY-3.0 by [SuddenSFD](https://github.com/SuddenSFD)
-
