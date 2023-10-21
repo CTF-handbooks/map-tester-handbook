@@ -29,7 +29,7 @@
 ## Prerequisites
 
 1. Minetest version 5.6 or above.
-    	- If your version is outdated, you can download the latest from the [official Minetest website](https://www.minetest.net/).
+	- If your version is outdated, you can download the latest from the [official Minetest website](https://www.minetest.net/).
 2. The `Capture the Flag` game. To get it,
 	- Go to the `Content` tab in your Minetest client.
 	- Click `Browse Online Content` 
