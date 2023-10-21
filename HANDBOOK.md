@@ -28,13 +28,15 @@
 
 ## Prerequisites
 
-1. The `Capture the Flag` game. To get it,
-	- Go to the `Content` Tab in your Minetest client.
+1. Minetest version 5.6 or above.
+    	- If your version is outdated, you can download the latest from the [official Minetest website](https://www.minetest.net/).
+2. The `Capture the Flag` game. To get it,
+	- Go to the `Content` tab in your Minetest client.
 	- Click `Browse Online Content` 
 	- Search for `capturetheflag` (make sure that the `Games` category is selected)
 	- Click on the `+` icon to install it.
-2. `WorldEdit` mod.
-	- Download it as you did for the CTF game, but you should have `Mods` as the category set.
+3. `WorldEdit` mod.
+	- Download it as you did for the CTF game, but you should have `Mods` set as the category.
 
 ---
 
@@ -46,7 +48,7 @@ All the [maps on CTF](https://github.com/mt-CTF/maps) are in a repository on [Gi
 
 ### 2. What do the folders and files mean?
 
-The repository contains folders for each map. For example, the folder containing the required files for the “Intervention in the Ice Age” Map is in the folder `iceage`. The necessary files within a map folder are:
+The repository contains folders for each map. For example, the folder containing the required files for the “Intervention in the Ice Age” map is in the folder `iceage`. The files within a map folder are:
 ```
 <map folder>
   ├── barriers.data
@@ -54,26 +56,26 @@ The repository contains folders for each map. For example, the folder containing
   ├── map.mts
   └── screenshot.png
 ```
-1. `barriers.data` : The calculated and compressed file containing the barrier locations for the map.
-2. `map.conf`: The metadata about various values and fields essential to the map.
-3. `map.mts`: The schematic file used to import the map into the game world.
-4. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible and needs to have an aspect ratio of 3:2 (600×400px is suggested).
+1. `barriers.data` : The calculated and compressed file containing the barrier locations for the map. This speeds up the barrier removal (`barriers.data` is optional, and is only supported by map version 3 or above).
+2. `map.conf`: The configuration of various values and fields essential to the map.
+3. `map.mts`: The schematic file used to import the map into the game world. The map itself is inside this file.
+4. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible, and it needs to have an aspect ratio of 3:2 (600×400px is suggested).
 
 ## What is GitHub and Git?
 
-GitHub is a site for managing code and various other projects using the "version-control system" - Git. For now, this handbook will only cover the basic ways of obtaining the files you require for testing maps without the need of any command line interface (such as on Linux).
+GitHub is a site for managing code and various other projects using the "version-control system" - Git. For now, this handbook will only cover the basic ways of obtaining the files of the map you would like to test without the need of any command line interface (such as on Linux).
 
 ---
 
 ## Git Terminology
 
 Below is a list of a few terms you should be aware of while testing maps and using GitHub. Don't be intimidated by these; keep them in mind for future reference.
-- A **repository**, is the remote location in which code is stored. In this case, the [map's repository](https://github.com/MT-CTF/maps) is the remote storage of the maps for CTF.
-- A **fork** is a copy of the original repository. It also shares code and settings from that repository. It can be modified and then be made into a **pull request** if needed.
-- A **commit** means saving changes to a project's files to the repository.
-- A **branch** refers to a separate version of the repository that initially has the same code base as the repository in which it was made. This new branch can have its own set of files and commits.
-- A ***pull** from a repository* means getting the source code from the repository to one's local machine.
-- A **push** means pushing to code on the remote repository with **commits** made on a local machine.
+- A **repository**, is a virtual storage for projects that tracks all changes made to the project's files. In this case, the [map's repository](https://github.com/MT-CTF/maps) is the remote storage of the maps for CTF.
+- A **fork** is a copy of the original repository. It can be modified without affecting the original repository and then be made into a **pull request** if needed.
+- A **commit** is a snapshot of a project. As a verb, it means the action of saving a snapshot (this can be understood as "save" or "apply changes").
+- A **branch** refers to a separate version of the repository that initially has the same code base as the repository in which it was made. A new branch can have its own set of files and commits.
+- A ***pull** from a repository* means getting the latest source code from the repository to one's local machine.
+- A **push** means pushing the **commits** made on a local machine to the remote repository.
 - A **pull request** (PR) refers to when you make changes on the fork of the repository and request to merge those changes with the main repository. Here, those who wish to make maps first fork the maps repository, make a separate branch on that fork dedicated to the addition of the map, and upon completion make a **pull request** to the maps repository.
 
 ---
@@ -92,11 +94,11 @@ Below is a list of a few terms you should be aware of while testing maps and usi
 
 ![Intra-PR Ribbon Example](images/ribbon_example.png)
 
-- You discuss about the PR and post your reviews in the ***Conversation*** tab. The ***Commits*** tab lists the commit history (basically the various series of changes made in it). Similarly, the **Files changed** tab mentions the files that have been added and changed.
+- You discuss about the PR and post your reviews in the ***Conversation*** tab. The ***Commits*** tab lists the commit history (basically the various series of changes made to it). Similarly, the **Files changed** tab shows the files that have been added, removed, or modified.
 
 #### *Labels on Pull Requests*
 
-The Map PRs have labels that indicate their current development stage and give information about them. You should look for the ***"New Map"*** and ***"Review Required :mag:"*** as they are the ones that need to be reviewed. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, and ***"Action/change needed :grey_exclamation:"***. An good example of a PR that you can test is:
+The Map PRs have labels that indicate their current development stage and give information about them. You should look for the ***"New Map"*** and ***"Review Required :mag:"*** as they are the ones that need to be reviewed. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, and ***"Action/change needed :grey_exclamation:"***. A good example of a PR that you can test is:
 
 ![Labels Example](images/label_example.png)
 
@@ -113,8 +115,11 @@ The Map PRs have labels that indicate their current development stage and give i
 
 ![Getting the files Example](images/pr-forked-repo-code-example.png)
 
-- Extract the ZIP folder and select the particular map folder that has been added by the author of the PR within the extracted folder. In the example PR mentioned, the folder is `sewer_village`
-- After successfully identifying the map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer.
+- Extract the ZIP file and select the particular map folder that has been added by the author of the PR within the extracted folder. In the example PR mentioned, the folder is `sewer_village`.
+- After successfully identifying the map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer. You can go to your Minetest folder and paste the following into your file app's directory to navigate there quickly:
+  ```
+  /games/capturetheflag/mods/ctf/ctf_map/maps
+  ```
 
 > Sometimes you may not know where your Minetest folder is on some operating systems. Going to the `About` section in Minetest and pressing the "Open User Data Directory" button should lead you there.  
 
@@ -163,6 +168,18 @@ You can check for these before or after testing the map in-game.
 Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map, run `/ctf_next -f <map_folder>`. In the case of the example PR, it would be `/ctf_next -f sewer_village`.
 
 > Command tip: To begin the match and end the build time, you can use the `/ctf_start` command.
+> To set yourself to the other team, run:
+  ```
+  /grantme ctf_team_admin
+  ```
+  Then:
+  ```
+  /ctf_teams set singleplayer <team color>
+  ```
+  For example:
+  ```
+  /ctf_teams set singleplayer blue
+  ```
 
 ### 5. Map Requirements
 
@@ -170,21 +187,21 @@ Upon starting the game, you will be playing like how the server works, with a ra
 
 - No errors appear (red text in the chat) when loading/playing the map. The error would mention what is causing the issue, so bring it to the PR author's notice in your review.
 - The area under the flag, that is, the floor of the base, should be unbreakable and have an area of 5x5 indestructible blocks at minimum. The flag should be placed in the middle of this area.
-- The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) and/or indestructible variants of blocks as the walls of the map that are above and below the ground, and the floor of the map being indestructible as well. 
-- It has barriers that disappear when build time is over. Check if all of these are placed properly, no areas that necessarily require it are missing
+- The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) and/or indestructible variants of blocks as the walls of the map that are above and below the ground, and the floor of the map being indestructible as well. They map may not have a roof while still not allowing the player to escape through it. Make sure you can't escape through the open roof.
+- It has barriers that disappear when build time is over. Check if all of these are placed properly. Make sure no areas that necessarily require it are missing
 - Chests are functional.
 - Flags can be captured without any bugs.
-- All the team zones are to the extent of where they should be and work as intended. You can test if they work correctly by making sure that you do not get teleported back to the base while at the edges of the walls of the map and the build-time barriers.
+- All the team zones are to the extent of where they should be and work as intended. You can test if they work correctly by making sure that you do not get teleported back to the base during build-time while at the edges of the walls of the map and the build-time barriers.
 - Map is bug-free - no holes leading to the void, "misplaced" blocks/accidental inconsistencies, map does not contain unsupported blocks, and so on.
 
 #### *Mechanics*
 
-- All the teams should have an **equal chance of winning**. This includes base position, balance of terrain, and ore count.
+- All the teams should have an **equal chance of winning**. This includes base position, balance of terrain, chests, and ore count.
 
 > To count ores in a region, you can use WorldEdit.
 > 1. Go to the first coordinate of the region and run `//1`.
 > 2. Go to the second position and run `//2`.
-> 3. Suppress (simply hiding them) all the ores you want to find the count (gets printed in the chat) by using `//suppress <node name>`. Ensure you are correctly typing the node name. For example, you will do `//suppress Mese Ore` for "Mese Ore" (hover over blocks in the inventory to obtain their proper name). Use `//restore` in a selected region to bring back the hidden nodes.
+> 3. Suppress (simply hiding them) all the ores you want to find the count of (gets printed in the chat) by using `//suppress <node name>`. Ensure you are correctly typing the node name. For example, you will do `//suppress Mese Ore` for "Mese Ore" (hover over blocks in the inventory to obtain their proper name). Use `//restore` in a selected region to bring back the hidden nodes.
 
 - The map should be unique and not be similar to other maps. Maps that are too plain or resemble existing ones so closely that they do not add new value have a higher chance of rejection. The design of the map should encourage differing gameplay and tactics, along with creativity on the map maker's part.
 
