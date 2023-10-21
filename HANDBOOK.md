@@ -116,7 +116,10 @@ The Map PRs have labels that indicate their current development stage and give i
 ![Getting the files Example](images/pr-forked-repo-code-example.png)
 
 - Extract the ZIP file and select the particular map folder that has been added by the author of the PR within the extracted folder. In the example PR mentioned, the folder is `sewer_village`.
-- After successfully identifying the map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer. You can go to your Minetest folder and search for the `maps` folder in your file manager's search to navigate there quickly.
+- After successfully identifying the map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer. You can go to your Minetest folder and paste the following path into your file manager's directory search to navigate there quickly:
+```
+games/capturetheflag/mods/ctf/ctf_map/maps
+```
 
 > Sometimes you may not know where your Minetest folder is on some operating systems. Going to the `About` section in Minetest and pressing the "Open User Data Directory" button should lead you there.  
 
