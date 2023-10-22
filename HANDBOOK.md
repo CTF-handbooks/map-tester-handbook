@@ -8,7 +8,7 @@
 	2. [What do the folders and files mean?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#2-what-do-the-folders-and-files-mean)
 - [What is GitHub and Git?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#what-is-github-and-git)
 - [Git Terminology](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#git-terminology)
-- [How to know which maps to review?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#how-to-know-which-maps-to-review)
+- [How do I know which maps to review?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#how-do-i-know-which-maps-to-review)
 	- [Where can I find Map PRs?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#where-can-i-find-map-prs)
 	- [Labels on Pull Requests](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#labels-on-pull-requests)
 - [Fetching PR files for testing](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#fetching-pr-files-for-testing)
@@ -80,7 +80,7 @@ Below is a list of a few terms you need to be aware of while testing maps and us
 
 ---
 
-## How do you know which maps to review?
+## How do I know which maps to review?
 
 #### *Where can I find Map PRs?*
 
