@@ -168,11 +168,11 @@ You can check for some of these before or after testing the map in-game.
 > You will need the `ctf_admin` privilege to run most of the commands in this handbook. So, grant yourself the privs using `/grantme ctf_admin`. If you would like other privileges such as `fly`, `nolcip`, `fast`, etc., then running the `/grantme all` command would cover them all.
 
 - Check the `map.conf` file's `game_modes` field, if the one you are voting for in-game is not included in the list, vote `0` and go to the mode the map is set for (TODO).
-- Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map, run `/ctf_next -f <map_folder>`. In the case of the example PR, it would be `/ctf_next -f sewer_village`.
+- Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map, run `/ctf_next -f <map_folder>`. In the case of the example PR, it would be `/ctf_next -f sewer_village`. (TODO)
 
-> Command tip: To begin the match and end the build time, you can use the `/ctf_start` command.
-
-> To set yourself to the other team, run:
+> Common commands:
+> - To end build time, you can use the `/ctf_start` command.
+> - To set yourself to the other team, run:
   ```
   /grantme ctf_team_admin
   ```
@@ -189,17 +189,17 @@ You can check for some of these before or after testing the map in-game.
 
 #### *Basics*
 
-- No errors appear (red text in the chat) when loading/playing the map. The error would mention what is causing the issue, so bring it to the PR author's notice in your review.
+- No errors appear (red text in the chat) when loading/playing the map. The error would mention what is causing the issue, so bring it to the PR author's notice accordingly.
 - Base:
 	- The area under the flag (the floor of the base) is indestructible and has a surface area of 5x5 at minimum.
 	- The flag is placed in the middle of the indestructible area.
 	- It has a team chest.
-- The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) and/or indestructible variants of blocks as the walls of the map that are above and below the ground, and the floor of the map being indestructible as well. The map may not have a roof while still not allowing the player to escape through it. Make sure you can't escape through the open roof.
-- It has red build-time barriers in the middle of the map that disappear when build time is over. Check if all of these are placed properly. Make sure no areas that necessarily require it are missing
-- Chests are functional.
+- The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) and/or indestructible variants of blocks for the walls of the map that are above and below the ground, and the floor of the map being indestructible as well. The map may not have a roof while still not allowing the player to escape through it. Make sure you can't escape through the open roof.
+- It has red build-time barriers separating teams that disappear when build time is over. Check if all of these are placed properly. Make sure no areas that need it are missing.
+- Treasure chests are functional.
 - Flags can be captured without any bugs.
 - All the team zones are to the extent of where they should be and work as intended. You can test if they work correctly by making sure that you do not get teleported back to the base during build-time while at the edges of the walls of the map and the build-time barriers. It is also important to make sure that you **do get** teleported back to base if you cross the barriers (for example by digging under the build-time barrier). You should also make sure that you do not get teleported back to base during build-time if you dig straight down to the bottom layer or build up to the roof.
-- Map is bug-free - no holes leading to the void, "misplaced" blocks/accidental inconsistencies, map does not contain unsupported blocks, and so on.
+- The map is without any holes leading to the void, "misplaced" blocks/accidental inconsistencies, does not contain unsupported blocks, and so on.
 
 #### *Mechanics*
 
@@ -208,13 +208,13 @@ You can check for some of these before or after testing the map in-game.
 > To count ores in a region, you can use WorldEdit.
 > 1. Go to the first coordinate of the region and run `//1`.
 > 2. Go to the second position and run `//2`.
-> 3. Suppress (simply hiding them) all the ores you want to find the count of (gets printed in the chat) by using `//suppress <node name>`. Ensure you are correctly typing the node name. For example, you will do `//suppress Mese Ore` for "Mese Ore" (hover over blocks in the inventory to obtain their proper name). Use `//restore` in a selected region to bring back the hidden nodes.
+> 3. Suppress (in other words, hiding without destroying) all the ores you want to find the count of (amount gets printed in the chat) by using `//suppress <node name>`. Ensure you are correctly typing the node name. For example, you will do `//suppress Mese Ore` for "Mese Ore" (hover over blocks in the inventory to obtain their exact name). Use `//restore` in a selected region to bring back the suppressed nodes.
 
-- The map should be unique and not be similar to other maps. Maps that are too plain or resemble existing ones so closely that they do not add new value have a higher chance of rejection. The design of the map should encourage differing gameplay and tactics, along with creativity on the map maker's part.
+- The map should be unique and not be similar to other maps. Maps that are too plain or are very similar to existing maps such that they do not add new value have a higher chance of rejection. The design of the map should encourage differing gameplay and tactics, along with creativity on the map maker's part.
 
 ### 6. *Your opinion is the key!*
 
-What's next? It's your thoughts on the map! Is it fun? What do you feel when you play it? How do you think it can be improved if needed? It all matters.
+What's next? It is your thoughts on the map! Is it fun to play? What do you think about it? How do you think it can be improved if needed? All this matters.
 
 ### 7. Posting your review
 
