@@ -1,4 +1,7 @@
 # Map Tester's Checklist
+
+> ***TODO***
+
 - [ ] PR:
 	- [ ] Necessary files
 	- [ ] Screenshot is appropriate and has an aspect ratio of 3:2
