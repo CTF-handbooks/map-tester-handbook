@@ -136,7 +136,7 @@ games/capturetheflag/mods/ctf/ctf_map/maps
 The configuration settings for the map are in the `<map_folder>/map.conf` file. It *should* firstly satisfy these criteria:
 - The map should be enabled, or else the map cannot be played. (`enable = true`)
 - The map has a license. It should be in the family of free (as in freedom) culture licenses like `CC BY-SA 4.0`. Note that not all Creative Commons licenses are free. For e.g., `CC BY-ND` - these are not accepted.
-- The initial items for the map are appropriate.
+- The initial items for the map are appropriate for the map (take notes of the terrain, the ores, etc...).
 - If the map has a hint, it should be relevant for it.
 You can check for these before or after testing the map in-game.
 
@@ -191,11 +191,11 @@ Upon starting the game, you will be playing like how the server works, with a ra
 	- The area under the flag (the floor of the base) is indestructible and has a surface area of 5x5 at minimum.
 	- The flag is placed in the middle of the indestructible area.
 	- It has a team chest.
-- The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) and/or indestructible variants of blocks as the walls of the map that are above and below the ground, and the floor of the map being indestructible as well. They map may not have a roof while still not allowing the player to escape through it. Make sure you can't escape through the open roof.
-- It has barriers that disappear when build time is over. Check if all of these are placed properly. Make sure no areas that necessarily require it are missing
+- The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) and/or indestructible variants of blocks as the walls of the map that are above and below the ground, and the floor of the map being indestructible as well. The map may not have a roof while still not allowing the player to escape through it. Make sure you can't escape through the open roof.
+- It has red build-time barriers in the middle of the map that disappear when build time is over. Check if all of these are placed properly. Make sure no areas that necessarily require it are missing
 - Chests are functional.
 - Flags can be captured without any bugs.
-- All the team zones are to the extent of where they should be and work as intended. You can test if they work correctly by making sure that you do not get teleported back to the base during build-time while at the edges of the walls of the map and the build-time barriers.
+- All the team zones are to the extent of where they should be and work as intended. You can test if they work correctly by making sure that you do not get teleported back to the base during build-time while at the edges of the walls of the map and the build-time barriers. It is also important to make sure that you **do get** teleported back to base if you cross the barriers (for example by digging under the build-time barrier). You should also make sure that you do not get teleported back to base during build-time if you dig straight down to the bottom layer or build up to the roof.
 - Map is bug-free - no holes leading to the void, "misplaced" blocks/accidental inconsistencies, map does not contain unsupported blocks, and so on.
 
 #### *Mechanics*
