@@ -11,10 +11,12 @@
 	- [ ] Basics:
 		- [ ] No errors
 		- [ ] Area under flag is indestructible (5x5)
+		- [ ] Flag is present in the middle
+		- [ ] Base has a team chest
 		- [ ] Map is inescapable
 		- [ ] Proper build-time barriers
 		- [ ] Functional chests
-		- [ ] Flags can be captured without bugs.
+		- [ ] Flags can be captured without bugs
 		- [ ] Map is "bug-free"
 	- [ ] Mechanics:
 		- [ ] Both teams have an equal chance of winning; base positions, balance of terrain, ore count, and so on.
