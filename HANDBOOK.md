@@ -168,6 +168,7 @@ You can check for these before or after testing the map in-game.
 Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map, run `/ctf_next -f <map_folder>`. In the case of the example PR, it would be `/ctf_next -f sewer_village`.
 
 > Command tip: To begin the match and end the build time, you can use the `/ctf_start` command.
+
 > To set yourself to the other team, run:
   ```
   /grantme ctf_team_admin
