@@ -187,7 +187,10 @@ Upon starting the game, you will be playing like how the server works, with a ra
 #### *Basics*
 
 - No errors appear (red text in the chat) when loading/playing the map. The error would mention what is causing the issue, so bring it to the PR author's notice in your review.
-- The area under the flag, that is, the floor of the base, should be unbreakable and have an area of 5x5 indestructible blocks at minimum. The flag should be placed in the middle of this area.
+- Base:
+	- The area under the flag (the floor of the base) is indestructible and has a surface area of 5x5 at minimum.
+	- The flag is placed in the middle of the indestructible area.
+	- It has a team chest.
 - The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) and/or indestructible variants of blocks as the walls of the map that are above and below the ground, and the floor of the map being indestructible as well. They map may not have a roof while still not allowing the player to escape through it. Make sure you can't escape through the open roof.
 - It has barriers that disappear when build time is over. Check if all of these are placed properly. Make sure no areas that necessarily require it are missing
 - Chests are functional.
