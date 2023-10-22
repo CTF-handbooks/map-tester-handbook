@@ -9,7 +9,7 @@
 - [What is GitHub and Git?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#what-is-github-and-git)
 - [Git Terminology](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#git-terminology)
 - [How to know which maps to review?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#how-to-know-which-maps-to-review)
-	- [Where to find Map PRs?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#where-to-find-map-prs)
+	- [Where can I find Map PRs?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#where-can-i-find-map-prs)
 	- [Labels on Pull Requests](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#labels-on-pull-requests)
 - [Fetching PR files for testing](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#fetching-pr-files-for-testing)
 - [Testing the Map](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#testing-the-map)
@@ -44,11 +44,11 @@
 
 ### 1. Where do I find the CTF maps and those that require testing?
 
-All the [maps on CTF](https://github.com/mt-CTF/maps) are in a repository on [GitHub](https://en.wikipedia.org/wiki/GitHub), the website via which you may be reading this. As a map tester, you will be reviewing maps that are currently "Pull Requests". Read along to learn more about them in case you're not familiar with Git and GitHub.
+All the [maps on CTF](https://github.com/mt-CTF/maps) are stored in a repository on [GitHub](https://en.wikipedia.org/wiki/GitHub), the website via which you may be reading this. As a map tester, you will be reviewing maps that are "Pull Requests". Read along to learn more about them in case you're not familiar with Git and GitHub.
 
 ### 2. What do the folders and files mean?
 
-The repository contains folders for each map. For example, the folder containing the required files for the “Intervention in the Ice Age” map is in the folder `iceage`. The files within a map folder are:
+The repository contains folders for each map. For example, the files for the “Intervention in the Ice Age” map are within the folder `iceage`. The files within a map folder are:
 ```
 <map folder>
   ├── barriers.data
@@ -56,25 +56,25 @@ The repository contains folders for each map. For example, the folder containing
   ├── map.mts
   └── screenshot.png
 ```
-1. `barriers.data` : The calculated and compressed file containing the barrier locations for the map. This speeds up the barrier removal (`barriers.data` is optional, and is only supported by map version 3 or above).
+1. `barriers.data` : The calculated and compressed file containing the barrier locations for the map. This speeds up the barrier removal (Note: `barriers.data` is optional, and is only supported by map version 3 or above).
 2. `map.conf`: The configuration of various values and fields essential to the map.
-3. `map.mts`: The schematic file used to import the map into the game world. The map itself is inside this file.
+3. `map.mts`: The schematic file used to import the map into the game world. The "map" itself is inside this file.
 4. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible, and it needs to have an aspect ratio of 3:2 (600×400px is suggested).
 
 ## What is GitHub and Git?
 
-GitHub is a site for managing code and various other projects using the "version-control system" - Git. For now, this handbook will only cover the basic ways of obtaining the files of the map you would like to test without the need of any command line interface (such as on Linux).
+GitHub is a site for managing code and various other projects using the version control system - [Git](https://git-scm.com/). For now, this handbook will only cover the basic ways of obtaining the files of the map you would like to test without the need of any command line interface (such as on Linux).
 
 ---
 
 ## Git Terminology
 
-Below is a list of a few terms you should be aware of while testing maps and using GitHub. Don't be intimidated by these; keep them in mind for future reference.
+Below is a list of a few terms you need to be aware of while testing maps and using GitHub. Don't be intimidated by these; keep them in mind for future reference.
 - A **repository**, is a virtual storage for projects that tracks all changes made to the project's files. In this case, the [map's repository](https://github.com/MT-CTF/maps) is the remote storage of the maps for CTF.
 - A **fork** is a copy of the original repository. It can be modified without affecting the original repository and then be made into a **pull request** if needed.
 - A **commit** is a snapshot of a project. As a verb, it means the action of saving a snapshot (this can be understood as "save" or "apply changes").
 - A **branch** refers to a separate version of the repository that initially has the same code base as the repository in which it was made. A new branch can have its own set of files and commits.
-- A ***pull** from a repository* means getting the latest source code from the repository to one's local machine.
+- A **pull** from a repository means getting the latest source code from the repository to one's local machine.
 - A **push** means pushing the **commits** made on a local machine to the remote repository.
 - A **pull request** (PR) refers to when you make changes on the fork of the repository and request to merge those changes with the main repository. Here, those who wish to make maps first fork the maps repository, make a separate branch on that fork dedicated to the addition of the map, and upon completion make a **pull request** to the maps repository.
 
@@ -82,23 +82,23 @@ Below is a list of a few terms you should be aware of while testing maps and usi
 
 ## How do you know which maps to review?
 
-#### *Where to find Map PRs?*
+#### *Where can I find Map PRs?*
 
-- Go to the [maps repository](https://github.com/mt-CTF/maps) on the web browser of your choice.
-- Click the `Pull Requests` section:
+- Go to the [maps repository](https://github.com/mt-CTF/maps) using the web browser of your choice.
+- Click `Pull Requests`:
 
 ![PR button](images/pr-s_section_example.png)
 
-- You will come to notice PRs with a few labels. Clicking on a particular PR will take you to it.
+- You will come to a page listing PRs with their respective labels. Clicking on a particular PR will take you to it.
 - There will be a series of tabs that will help you navigate through the things related to the specific PR. (An example image is shown below)
 
 ![Intra-PR Ribbon Example](images/ribbon_example.png)
 
-- You discuss about the PR and post your reviews in the ***Conversation*** tab. The ***Commits*** tab lists the commit history (basically the various series of changes made to it). Similarly, the **Files changed** tab shows the files that have been added, removed, or modified.
+- You discuss about the PR and post your reviews in the ***Conversation*** tab. The ***Commits*** tab lists the commit history (basically the various series of changes made to it). Similarly, the ***Files changed*** tab shows the files that have been added, removed, or modified.
 
 #### *Labels on Pull Requests*
 
-The Map PRs have labels that indicate their current development stage and give information about them. You should look for the ***"New Map"*** and ***"Review Required :mag:"*** as they are the ones that need to be reviewed. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, and ***"Action/change needed :grey_exclamation:"***. A good example of a PR that you can test is:
+The Map PRs have labels that indicate their current development stage and give information about them. You should look for the ***"New Map"*** and ***"Review Required :mag:"*** labels, as they are the ones that need to be reviewed. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, and ***"Action/change needed :grey_exclamation:"***. A good example of a PR that you can test is:
 
 ![Labels Example](images/label_example.png)
 
@@ -115,13 +115,13 @@ The Map PRs have labels that indicate their current development stage and give i
 
 ![Getting the files Example](images/pr-forked-repo-code-example.png)
 
-- Extract the ZIP file and select the particular map folder that has been added by the author of the PR within the extracted folder. In the example PR mentioned, the folder is `sewer_village`.
-- After successfully identifying the map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer. You can go to your Minetest folder and paste the following path into your file manager's directory search to navigate there quickly:
+- Extract the ZIP file and select the map folder that has been added by the author of the PR within the extracted folder. In the example PR mentioned, the folder is `sewer_village`.
+- After successfully identifying the new map folder, copy and paste it to `<YOUR MINETEST FOLDER>/games/capturetheflag/mods/ctf/ctf_map/maps/` on your computer. You can go to your Minetest folder and paste the following path into your file manager's directory search to navigate there quickly:
 ```
 games/capturetheflag/mods/ctf/ctf_map/maps
 ```
 
-> Sometimes you may not know where your Minetest folder is on some operating systems. Going to the `About` section in Minetest and pressing the "Open User Data Directory" button should lead you there.  
+> Sometimes you may not know where your Minetest folder is on some operating systems. Going to the `About` section in Minetest and pressing the `Open User Data Directory` button should lead you there.  
 
 - You have now retrieved the required map folder!
 
@@ -133,12 +133,14 @@ games/capturetheflag/mods/ctf/ctf_map/maps
 
 ### 1. Map config
 
-The configuration settings for the map are in the `<map_folder>/map.conf` file. It *should* firstly satisfy these criteria:
-- The map should be enabled, or else the map cannot be played. (`enable = true`)
+The configuration values and fields for the map are in the `<map_folder>/map.conf` file. It *should* firstly satisfy these criteria:
+- Required fields such as `game_modes`, `name`, and `author` are filled.
+- The map should be enabled, or else the map cannot be played. (Look for the line `enable = true`)
 - The map has a license. It should be in the family of free (as in freedom) culture licenses like `CC BY-SA 4.0`. Note that not all Creative Commons licenses are free. For e.g., `CC BY-ND` - these are not accepted.
-- The initial items for the map are appropriate for the map (take notes of the terrain, the ores, etc...).
+- The initial items for the map are appropriate for the map (take notes of the terrain, the ores, etc.).
 - If the map has a hint, it should be relevant for it.
-You can check for these before or after testing the map in-game.
+- If values of [these map constants](https://github.com/MT-CTF/capturetheflag/blob/master/mods/ctf/ctf_map/README.md#map-constants) are overriden from the default, the modifications do not negatively impact game-play. 
+You can check for some of these before or after testing the map in-game.
 
 ### 2. Making the world
 
@@ -158,14 +160,15 @@ You can check for these before or after testing the map in-game.
 
 - Select the new world that you just created.
 - Disable `Creative Mode` to be able to play a match of CTF. You can disable `Enable Damage` as well.
-- To enable the `WorldEdit` mod, press `Select Mods` and double click the `WorldEdit` mod name to enable it.
-- Then click `Play Game` to begin. An example is shown below
+- Enable the `WorldEdit` mod by pressing `Select Mods` and double clicking the `WorldEdit` mod to enable it.
+- Then click `Play Game` to begin.
 
 ### 4. Selecting the Map
 
 > You will need the `ctf_admin` privilege to run most of the commands in this handbook. So, grant yourself the privs using `/grantme ctf_admin`. If you would like other privileges such as `fly`, `nolcip`, `fast`, etc., then running the `/grantme all` command would cover them all.
 
-Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map, run `/ctf_next -f <map_folder>`. In the case of the example PR, it would be `/ctf_next -f sewer_village`.
+- Check the `map.conf` file's `game_modes` field, if the one you are voting for in-game is not included in the list, vote `0` and go to the mode the map is set for (TODO).
+- Upon starting the game, you will be playing like how the server works, with a random map at first. To choose your map, run `/ctf_next -f <map_folder>`. In the case of the example PR, it would be `/ctf_next -f sewer_village`.
 
 > Command tip: To begin the match and end the build time, you can use the `/ctf_start` command.
 
