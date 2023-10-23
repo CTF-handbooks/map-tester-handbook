@@ -197,7 +197,7 @@ You can check for some of these before or after testing the map in-game.
 - It has red build-time barriers separating teams that disappear when build time is over. Check if all of these are correctly placed. Make sure no areas that need it are missing.
 - Treasure chests are functional.
 - Flags can be captured without any bugs.
-- All the team zones are to the extent of where they should be and work as intended. YYou can test if they function correctly by ensuring you do not get teleported back to the base during build-time while at the edges of the map's walls and the build-time barriers. It is also important to ensure you get teleported back to base if you cross the barriers (for example, by digging under the build-time barrier). You should also make sure that you do not get teleported back to base during build-time if you dig straight down to the bottom layer or build up to the roof.
+- All the team zones are to the extent of where they should be and work as intended. You can test if they function correctly by ensuring you do not get teleported back to the base during build-time while at the edges of the map's walls and the build-time barriers. It is also important to ensure you get teleported back to base if you cross the barriers (for example, by digging under the build-time barrier). You should also make sure that you do not get teleported back to base during build-time if you dig straight down to the bottom layer or build up to the roof.
 - The map is without any holes leading to the void, "misplaced" blocks/accidental inconsistencies, does not contain unsupported blocks, and so on.
 
 #### *Mechanics*
@@ -223,4 +223,4 @@ To post your review, go to the ***Conversation*** tab within the PR on GitHub. W
 
 ## Test away!
 
-Now that you have completed reading this and are capable of testing a map, you can use [`CHECKLIST.md`](CHECKLIST.md) as a summary of the process so that you never miss any. Thank you, and enjoy your time map PRs for CTF!
+Now that you have completed reading this and are capable of testing a map, you can use [`CHECKLIST.md`](CHECKLIST.md) as a summary of the process so that you never miss a step. Thank you, and enjoy your time testing map PRs for CTF!
