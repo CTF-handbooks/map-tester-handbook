@@ -4,7 +4,7 @@
 
 - [Prerequisites](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#prequisites)
 - [Structure of the CTF Maps Repository](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#structure-of-the-ctf-maps-repository)
-	1. [Where do I find the CTF maps and those that require testing?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#1-where-do-i-find-the-ctf-maps-and-those-that-require-testing)
+	1. [Where can I find the CTF maps and those that require testing?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#1-where-can-i-find-the-ctf-maps-and-those-that-require-testing)
 	2. [What do the folders and files mean?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#2-what-do-the-folders-and-files-mean)
 - [What is GitHub and Git?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#what-is-github-and-git)
 - [Git Terminology](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#git-terminology)
@@ -42,7 +42,7 @@
 
 ## Structure of the CTF Maps Repository
 
-### 1. Where do I find the CTF maps and those that require testing?
+### 1. Where can I find the CTF maps and those that require testing?
 
 All the [maps on CTF](https://github.com/mt-CTF/maps) are stored in a repository on [GitHub](https://en.wikipedia.org/wiki/GitHub), the website via which you may be reading this. As a map tester, you will be reviewing maps that are "Pull Requests". Read along to learn more about them in case you're not familiar with Git and GitHub.
 
@@ -56,14 +56,14 @@ The repository contains folders for each map. For example, the files for the “
   ├── map.mts
   └── screenshot.png
 ```
-1. `barriers.data` : The calculated and compressed file containing the barrier locations for the map. This speeds up the barrier removal (Note: `barriers.data` is optional, and is only supported by map version 3 or above).
+1. `barriers.data` : The calculated and compressed file containing the build-time barrier locations for the map. This speeds up the barrier removal (Note: `barriers.data` is optional, and is only supported by map version 3 or above).
 2. `map.conf`: The configuration of various values and fields essential to the map.
 3. `map.mts`: The schematic file used to import the map into the game world. The "map" itself is inside this file.
 4. `screenshot.png`: A screenshot of the map. It should make the important parts of the map visible, and it needs to have an aspect ratio of 3:2 (600×400px is suggested).
 
 ## What is GitHub and Git?
 
-GitHub is a site for managing code and various other projects using the version control system - [Git](https://git-scm.com/). For now, this handbook will only cover the basic ways of obtaining the files of the map you would like to test without the need of any command line interface (such as on Linux).
+GitHub is one of the many services for managing code and various other projects using the version control system - [Git](https://git-scm.com/). For now, this handbook will only cover the basic ways of obtaining the files of the map you would like to test without the need of any command line interface (such as on Linux).
 
 ---
 
@@ -84,13 +84,13 @@ Below is a list of a few terms you need to be aware of while testing maps and us
 
 #### *Where can I find Map PRs?*
 
-- Go to the [maps repository](https://github.com/mt-CTF/maps) using the web browser of your choice.
+- Go to the [CTF maps repository](https://github.com/mt-CTF/maps) using the web browser of your choice.
 - Click `Pull Requests`:
 
 ![PR button](images/pr-s_section_example.png)
 
-- You will come to a page listing PRs with their respective labels. Clicking on a particular PR will take you to it.
-- There will be a series of tabs that will help you navigate through the things related to the specific PR. (An example image is shown below)
+- You will be directed to a webpage listing PRs with their respective labels. Clicking on a particular PR will take you to it.
+- There will be a series of tabs that will help you navigate through the things related to a specific PR. (An example image is shown below)
 
 ![Intra-PR Ribbon Example](images/ribbon_example.png)
 
@@ -98,7 +98,7 @@ Below is a list of a few terms you need to be aware of while testing maps and us
 
 #### *Labels on Pull Requests*
 
-The Map PRs have labels that indicate their current development stage and give information about them. You should look for the ***"New Map"*** and ***"Review Required :mag:"*** labels, as they are the ones that need to be reviewed. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, and ***"Action/change needed :grey_exclamation:"***. A good example of a PR that you can test is:
+The Map PRs have labels that indicate their current development stage and give information about them. You should look for the ***"New Map"*** and ***"Review Required :mag:"*** labels, as they are the ones that are needed to be reviewed. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, and ***"Action/change needed :grey_exclamation:"***. A good example of a PR that you can test is:
 
 ![Labels Example](images/label_example.png)
 
@@ -111,7 +111,7 @@ The Map PRs have labels that indicate their current development stage and give i
 
 ![PR Fork/Branch Example](images/pr-fork-branch-example.png)
 
-- After doing so, use the `Download ZIP` option like this:
+- After doing so, press the `Download ZIP` button:
 
 ![Getting the files Example](images/pr-forked-repo-code-example.png)
 
@@ -123,7 +123,7 @@ games/capturetheflag/mods/ctf/ctf_map/maps
 
 > Sometimes you may not know where your Minetest folder is on some operating systems. Going to the `About` section in Minetest and pressing the `Open User Data Directory` button should lead you there.  
 
-- You have now retrieved the required map folder!
+- You have now retrieved the map folder!
 
 > Make sure that the map has all the required files as stated in [What do the folders and files mean?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#2-what-do-the-folders-and-files-mean). If not, then drop a message regarding it in the PR if not addressed by others already.
 
@@ -133,7 +133,7 @@ games/capturetheflag/mods/ctf/ctf_map/maps
 
 ### 1. Map config
 
-The configuration values and fields for the map are in the `<map_folder>/map.conf` file. It *should* firstly satisfy these criteria:
+The configuration values and fields for the map are in the `<map_folder>/map.conf` file. It should firstly satisfy these criteria:
 - Required fields such as `game_modes`, `name`, and `author` are filled.
 - The map should be enabled, or else the map cannot be played. (Look for the line `enable = true`)
 - The map has a license. It should be in the family of free (as in freedom) culture licenses like `CC BY-SA 4.0`. Note that not all Creative Commons licenses are free. For e.g., `CC BY-ND` - these are not accepted.
@@ -194,7 +194,7 @@ You can check for some of these before or after testing the map in-game.
 	- The area under the flag (the floor of the base) is indestructible and has a surface area of 5x5 at minimum.
 	- The flag is placed in the middle of the indestructible area.
 	- It has a team chest.
-- The map **should** be inescapable. Meaning it should be surrounded by "Indestructible Barrier Glass" (`ctf_map:ind_glass`) and/or indestructible variants of blocks for the walls of the map that are above and below the ground, and the floor of the map being indestructible as well. The map may not have a roof while still not allowing the player to escape through it. Make sure you can't escape through the open roof.
+- The map **should** be inescapable. Meaning the **walls** and **floor** of the map should be made of "Indestructible Barrier Glass" (`ctf_map:ind_glass`) and/or indestructible variants of blocks. The map may not have a roof while still not allowing the player to escape through it. Make sure you can't escape through the open roof.
 - It has red build-time barriers separating teams that disappear when build time is over. Check if all of these are placed properly. Make sure no areas that need it are missing.
 - Treasure chests are functional.
 - Flags can be captured without any bugs.
@@ -203,7 +203,7 @@ You can check for some of these before or after testing the map in-game.
 
 #### *Mechanics*
 
-- All the teams should have an **equal chance of winning**. This includes base position, balance of terrain, chests, and ore count.
+- All the teams should have an **equal chance of winning** and **be subject to the same amount of difficulty in game-play**. This includes base position, balance of terrain, chests, and ore count.
 
 > To count ores in a region, you can use WorldEdit.
 > 1. Go to the first coordinate of the region and run `//1`.
@@ -214,7 +214,7 @@ You can check for some of these before or after testing the map in-game.
 
 ### 6. *Your opinion is the key!*
 
-What's next? It is your thoughts on the map! Is it fun to play? What do you think about it? How do you think it can be improved if needed? All this matters.
+What's next? It is your thoughts on the map! Is it fun to play? What do you think about it? How do you think its mechanics/style/idea can be improved? All this matters.
 
 ### 7. Posting your review
 
