@@ -173,17 +173,17 @@ You can check for some of these before or after testing the map in-game.
 > Common commands:
 > - To end build time, you can use the `/ctf_start` command.
 > - To set yourself to the other team, run:
-  ```
-  /grantme ctf_team_admin
-  ```
-  Then:
-  ```
-  /ctf_teams set singleplayer <team color>
-  ```
-  For example:
-  ```
-  /ctf_teams set singleplayer blue
-  ```
+>  ```
+>  /grantme ctf_team_admin
+>  ```
+>  Then:
+>  ```
+>  /ctf_teams set singleplayer <team color>
+>  ```
+>  For example:
+>  ```
+>  /ctf_teams set singleplayer blue
+>  ```
 
 ### 5. Map Requirements
 
