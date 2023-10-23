@@ -2,26 +2,26 @@
 
 ## Table of Contents
 
-- [Prerequisites](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#prequisites)
-- [Structure of the CTF Maps Repository](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#structure-of-the-ctf-maps-repository)
+- [Prerequisites](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#prequisites)
+- [Structure of the CTF Maps Repository](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#structure-of-the-ctf-maps-repository)
 	1. [Where can I find the CTF maps and those that require testing?](https://github.com/CTF-handbooks/map-tester-handbook/blob/main/HANDBOOK.md#1-where-can-i-find-the-ctf-maps-and-those-that-require-testing)
-	2. [What do the folders and files mean?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#2-what-do-the-folders-and-files-mean)
-- [What is GitHub and Git?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#what-is-github-and-git)
-- [Git Terminology](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#git-terminology)
-- [How do I know which maps to review?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#how-do-i-know-which-maps-to-review)
-	- [Where can I find Map PRs?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#where-can-i-find-map-prs)
-	- [Labels on Pull Requests](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#labels-on-pull-requests)
-- [Fetching PR files for testing](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#fetching-pr-files-for-testing)
-- [Testing the Map](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#testing-the-map)
-	1. [Map config](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#1-map-config)
-	2. [Making the world](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#2-making-the-world)
-	3. [Playing the game](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#3-playing-the-game)
-	4. [Selecting the Map](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#4-selecting-the-map)
-	5. [Map Requirements](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#5-map-requirements)
-		- [Basics](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#basics)
-		- [Mechanics](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#mechanics)
-	6. [*Your opinion is the key!*](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#6-your-opinion-is-the-key)
-	7. [Posting your review](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#7-posting-your-review)
+	2. [What do the folders and files mean?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#2-what-do-the-folders-and-files-mean)
+- [What is GitHub and Git?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#what-is-github-and-git)
+- [Git Terminology](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#git-terminology)
+- [How do I know which maps to review?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#how-do-i-know-which-maps-to-review)
+	- [Where can I find Map PRs?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#where-can-i-find-map-prs)
+	- [Labels on Pull Requests](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#labels-on-pull-requests)
+- [Fetching PR files for testing](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#fetching-pr-files-for-testing)
+- [Testing the Map](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#testing-the-map)
+	1. [Map config](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#1-map-config)
+	2. [Making the world](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#2-making-the-world)
+	3. [Playing the game](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#3-playing-the-game)
+	4. [Selecting the Map](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#4-selecting-the-map)
+	5. [Map Requirements](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#5-map-requirements)
+		- [Basics](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#basics)
+		- [Mechanics](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#mechanics)
+	6. [*Your opinion is the key!*](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#6-your-opinion-is-the-key)
+	7. [Posting your review](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#7-posting-your-review)
 - [Test away!](https://github.com/CTF-handbooks/map-tester-handbook/blob/main/HANDBOOK.md#test-away)
 
 ---
@@ -125,7 +125,7 @@ games/capturetheflag/mods/ctf/ctf_map/maps
 
 - You have now retrieved the map folder!
 
-> Make sure that the map has all the required files as stated in [What do the folders and files mean?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#2-what-do-the-folders-and-files-mean). If not, then drop a message regarding it in the PR if not addressed by others already.
+> Make sure that the map has all the required files as stated in [What do the folders and files mean?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/HANDBOOK.md#2-what-do-the-folders-and-files-mean). If not, then drop a message regarding it in the PR if not addressed by others already.
 
 ---
 
