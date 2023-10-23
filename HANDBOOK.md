@@ -4,7 +4,7 @@
 
 - [Prerequisites](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#prequisites)
 - [Structure of the CTF Maps Repository](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#structure-of-the-ctf-maps-repository)
-	1. [Where can I find the CTF maps and those that require testing?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#1-where-can-i-find-the-ctf-maps-and-those-that-require-testing)
+	1. [Where can I find the CTF maps and those that require testing?](https://github.com/CTF-handbooks/map-tester-handbook/blob/main/HANDBOOK.md#1-where-can-i-find-the-ctf-maps-and-those-that-require-testing)
 	2. [What do the folders and files mean?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#2-what-do-the-folders-and-files-mean)
 - [What is GitHub and Git?](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#what-is-github-and-git)
 - [Git Terminology](https://github.com/CTF-Handbooks/map-tester-handbook/blob/main/tester-handbook.md#git-terminology)
