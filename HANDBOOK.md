@@ -35,7 +35,7 @@
 	- Click `Browse Online Content` 
 	- Search for `capturetheflag` (make sure that the `Games` category is selected)
 	- Click on the `+` icon to install it.
-3. `WorldEdit` mod.
+3. `WorldEdit` mod (Note: Although this is *optional*, it is required for a holistic map review).
 	- Download it as you did for the CTF game, but you should have `Mods` set as the category.
 
 ---
