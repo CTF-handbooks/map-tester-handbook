@@ -48,7 +48,7 @@ All the [maps on CTF](https://github.com/mt-CTF/maps) are stored in a repository
 
 ### 2. What do the folders and files mean?
 
-The repository contains folders for each map. For example, the “Intervention in the Ice Age” map files are located in the folder `iceage`. The files within a map folder are:
+The repository contains folders for each map. For example, the “Intervention in the Ice Age” map files are in the `iceage` folder. The files within a map folder are:
 ```
 <map folder>
   ├── barriers.data
@@ -106,7 +106,7 @@ The Map PRs have labels that indicate their current development stage and give i
 
 ## Fetching PR files for testing
 
-- Go to the `Pull Requests` tab and select the PR you want review.
+- Go to the `Pull Requests` tab and select the PR you want to review.
 - Click on the blue text indicating the `<pr-author>:<branch-of-their-fork>`, like:
 
 ![PR Fork/Branch Example](images/pr-fork-branch-example.png)
@@ -205,7 +205,7 @@ You can check for some of these before or after testing the map in-game.
 - All the teams should have an **equal chance of winning** and **be subject to the same amount of difficulty in gameplay**. Things that affect those are base position, terrain balance, chests, and ore count.
 
 > To count ores in a region, you can use WorldEdit.
-> 1. Go to the first coordinate of the region and run `//1`.
+> 1. Go to the first coordinate of the area and run `//1`.
 > 2. Go to the second position and run `//2`.
 > 3. Suppress (in other words, hiding without destroying) all the ores you want to find the count of (amount gets printed in the chat) by using `//suppress <node name>`. Ensure you are correctly typing the node name. For example, you will do `//suppress Mese Ore` for "Mese Ore" (hover over blocks in the inventory to obtain their exact name). Use `//restore` in a selected region to bring back the suppressed nodes.
 
@@ -223,4 +223,4 @@ To post your review, go to the ***Conversation*** tab within the PR on GitHub. W
 
 ## Test away!
 
-Now that you have completed reading this and are capable of testing a map, you can use [`CHECKLIST.md`](CHECKLIST.md) as a summary of the process so that you never miss a step. Thank you, and enjoy your time testing map PRs for CTF!
+Now that you have completed reading this and can test a map, you can use [`CHECKLIST.md`](CHECKLIST.md) as a summary of the process so that you never miss a step. Thank you, and enjoy your time testing map PRs for CTF!
