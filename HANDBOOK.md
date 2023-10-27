@@ -48,7 +48,7 @@ All the [maps on CTF](https://github.com/mt-CTF/maps) are stored in a repository
 
 ### 2. What do the folders and files mean?
 
-The repository contains folders for each map. For example, the “Intervention in the Ice Age” map files are within the folder `iceage`. The files within a map folder are:
+The repository contains folders for each map. For example, the “Intervention in the Ice Age” map files are located in the folder `iceage`. The files within a map folder are:
 ```
 <map folder>
   ├── barriers.data
@@ -63,7 +63,7 @@ The repository contains folders for each map. For example, the “Intervention i
 
 ## What are GitHub and Git?
 
-GitHub is one of the many services for managing code and other projects using the version control system - [Git](https://git-scm.com/). For now, this handbook will only cover the primary ways of obtaining the files of the map you would like to test without any command line interface (such as on Linux).
+GitHub is one of the many services for managing code and other projects using the version control system - [Git](https://git-scm.com/). For now, this handbook will only cover the primary ways of obtaining the files of the map you would like to test without any command line interface.
 
 ---
 
