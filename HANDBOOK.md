@@ -98,7 +98,7 @@ Below is a list of a few terms you need to know while testing maps and using Git
 
 #### *Labels on Pull Requests*
 
-The Map PRs have labels that indicate their current development stage and give information about them. You should look for the ***"New Map"*** and ***"Review Required :mag:"*** labels, as they are the ones that need a review. There are also others, such as, ***"PR not created properly"*** ***"WIP :building_construction:"*** (= Work In Progress), ***"Enhancement"***, and ***"Action/change needed :grey_exclamation:"***. A good example of a PR that you can test is:
+The Map PRs have labels that indicate their current development stage and give information about them. You should look for the ***"New Map"*** and ***"Review Required 🔍"*** labels, as they are the ones that need a review. There are also others, such as, ***"PR not created properly"***, ***"WIP 🏗️"*** (= Work In Progress), ***"Enhancement"***, and ***"Action/change needed ❕"***. A good example of a PR that you can test is:
 
 ![Labels Example](images/label_example.png)
 
