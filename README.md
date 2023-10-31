@@ -1,3 +1,4 @@
+# The Map Tester's Handbook
 <p align="center">
   <img src="images/header.png"/>
 </p>
