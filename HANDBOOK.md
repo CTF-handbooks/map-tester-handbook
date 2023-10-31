@@ -1,4 +1,4 @@
-# The Map Tester's Handbook
+# Testing a Map for Capture the Flag
 
 ## Table of Contents
 
